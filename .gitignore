@@ -1,0 +1,10 @@
+.env
+.env.*
+.vercel/
+StartStopScript/logs/
+StartStopScript/last-deployment.txt
+*.log
+node_modules/
+
+.vercel
+.env*

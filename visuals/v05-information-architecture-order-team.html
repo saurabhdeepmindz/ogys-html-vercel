@@ -1,0 +1,476 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Information architecture - Order team</title><style>:root{--navy:#1B3A5C;--ink:#222;--muted:#555;--bg:#fff;--card:#F7F8FA;--line:#DDE2E8}
+@media (prefers-color-scheme:dark){:root{--navy:#9CC3EA;--ink:#e8e8e8;--muted:#b0b0b0;--bg:#16181c;--card:#1f2329;--line:#333a44}}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{padding:22px 28px;border-bottom:1px solid var(--line)}h1{margin:0;font-size:24px;color:var(--navy)}
+.sub{color:var(--muted);margin-top:6px;font-size:14px;line-height:1.45}main{padding:20px 28px;max-width:1500px}
+h2{color:var(--navy);font-size:19px;margin:26px 0 10px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit;display:block}
+.card .thumb{background:#fff;border-radius:8px;height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.card .thumb img{max-width:100%;max-height:100%}.card b{display:block;margin-top:10px;color:var(--navy)}.card span{font-size:13px;color:var(--muted)}
+.empty{font-style:italic;color:var(--muted)}.bar{display:flex;gap:8px;align-items:center;margin:10px 0}
+button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px}
+.view{border:1px solid var(--line);border-radius:10px;overflow:auto;background:#fff;max-height:78vh}.view img{display:block;transform-origin:0 0}
+.vwrap{position:relative}.full{position:absolute;top:8px;right:22px;z-index:2;background:#fff;border:1px solid var(--line);
+border-radius:8px;padding:4px 10px;font-size:18px;text-decoration:none;color:var(--navy);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.full:hover{border-color:#2E6DA4}
+.meta{font-size:14px;line-height:1.6}.meta td{padding:3px 12px 3px 0;vertical-align:top}a{color:#2E6DA4}
+@media (max-width:600px){header,main{padding:14px 16px}}@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Inter';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-wght-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-ext-wght-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Serif 4';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-wght-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Serif 4';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-ext-wght-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'JetBrains Mono';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--ink:#191919;--ink-2:#33322E;--paper:#FAF9F5;--paper-2:#F0EEE6;--paper-3:#E8E6DC;--surface:#fff;--accent:#D97757;--accent-deep:#B85F3E;--accent-soft:#FBEDE7;--accent-ink:#A04E2F;--border:#E4E1D8;--border-strong:#CFCBBD;--muted:#6E6C64;--muted-2:#98958B}body{font-family:Inter,"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+header{background:var(--surface);border-bottom:1px solid var(--border)}
+h1{font:600 30px/1.2 "Source Serif 4",Georgia,"Times New Roman",serif;color:var(--ink)}h2{font:600 21px/1.3 "Source Serif 4",Georgia,"Times New Roman",serif;color:var(--ink)}
+.sub{color:var(--ink-2)}.meta td:first-child{color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+button{background:var(--surface);border:1px solid var(--border-strong);color:var(--ink);border-radius:9px}
+button:hover{border-color:var(--accent);color:var(--accent-ink)}
+.view{border:1px solid var(--border);border-radius:14px}
+.full{border:1px solid var(--accent);color:#fff;background:var(--accent);border-radius:9px;box-shadow:0 0 0 4px var(--accent-soft)}
+.full:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px}.card .thumb{background:var(--paper)}
+.card b{color:var(--ink)}a{color:var(--accent-ink)}.embedded .back{display:none}</style><script>if(window.self!==window.top)document.documentElement.classList.add('embedded')</script></head><body>
+<header><h1>Information architecture - Order team</h1><div class="sub">The order team’s day: data upload, order generation, validation and approval, output and dispatch, order feedback and monitoring.</div></header><main>
+<table class="meta"><tr><td>Reference</td><td>V05 · Information architecture</td></tr>
+<tr><td>Status</td><td>Assumed - confirm</td></tr><tr><td>Requirements cited</td><td><a href="../Sparecare_OGYS_FRD-v1.0.html#s-5-4-fr-002--data-upload-and-parameter-mapping">FR-002</a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-5-5-fr-003--upload-validation-and-multi-file-consolidation">FR-003</a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-3-fr-014--order-generation-readiness">FR-014</a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-3-fr-021--order-output-format">FR-021</a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu">FR-023</a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-5-fr-024--order-generation-page---adjustments-and-visibili">FR-024</a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-5-fr-026--spm-order-feedback-update">FR-026</a></td></tr></table>
+<div class="bar"><button onclick="z(1.25)">Zoom in</button><button onclick="z(0.8)">Zoom out</button><button onclick="fit()">Fit width</button>
+<a href="v05-information-architecture-order-team.svg" download>Download SVG</a><span class="back"> · <a href="index.html">All diagrams</a> · <a href="https://ogys-html-vercel.vercel.app/Sparecare_OGYS_FRD-v1.0.html">open the FRD</a></span></div>
+<p class="sub" style="margin:4px 0 8px">Underlined references open the FRD section, the requirement or the workflow.</p>
+<div class="vwrap"><a class="full" href="v05-information-architecture-order-team.svg" target="_blank" rel="noopener" title="Open the whole diagram in a new tab">&#8599;</a>
+<div class="view" id="v"><svg xmlns="http://www.w3.org/2000/svg" width="7080" height="2902" viewBox="0 0 7080 2902" font-family="Inter, Segoe UI, Arial, sans-serif"><title>Information architecture - Order team</title><defs><style>@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Inter';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-wght-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-ext-wght-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Serif 4';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-wght-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Serif 4';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-ext-wght-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'JetBrains Mono';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style></defs><rect width="7080" height="2902" fill="#fff"/><rect x="20.0" y="20.0" width="7040.0" height="2862.0" rx="0" fill="none" stroke="#CFCFCF" stroke-width="2"/>
+<path d="M3540.0,388 V432" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3531.0,422 L3540.0,432 L3549.0,422" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3540.0,528 V572" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3531.0,562 L3540.0,572 L3549.0,562" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3540.0,848 V910" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250.0,910 H6050.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250.0,910 V962" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M241.0,952 L250.0,962 L259.0,952" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1410.0,910 V962" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1401.0,952 L1410.0,962 L1419.0,952" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2570.0,910 V962" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2561.0,952 L2570.0,962 L2579.0,952" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3730.0,910 V962" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3721.0,952 L3730.0,962 L3739.0,952" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4890.0,910 V962" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4881.0,952 L4890.0,962 L4899.0,952" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6050.0,910 V962" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6041.0,952 L6050.0,962 L6059.0,952" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90,1002 H94 Q78,1002 78,1018 V1720.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78,1148.0 Q78,1164.0 94,1164.0 H122" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112,1155.0 L122,1164.0 L112,1173.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78,1500.0 Q78,1516.0 94,1516.0 H122" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112,1507.0 L122,1516.0 L112,1525.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78,1720.0 Q78,1736.0 94,1736.0 H122" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112,1727.0 L122,1736.0 L112,1745.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1250,1002 H1254 Q1238,1002 1238,1018 V2622.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1238,1148.0 Q1238,1164.0 1254,1164.0 H1282" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1272,1155.0 L1282,1164.0 L1272,1173.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1238,1412.0 Q1238,1428.0 1254,1428.0 H1282" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1272,1419.0 L1282,1428.0 L1272,1437.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1238,1720.0 Q1238,1736.0 1254,1736.0 H1282" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1272,1727.0 L1282,1736.0 L1272,1745.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1238,2006.0 Q1238,2022.0 1254,2022.0 H1282" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1272,2013.0 L1282,2022.0 L1272,2031.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1238,2292.0 Q1238,2308.0 1254,2308.0 H1282" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1272,2299.0 L1282,2308.0 L1272,2317.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1238,2622.0 Q1238,2638.0 1254,2638.0 H1282" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1272,2629.0 L1282,2638.0 L1272,2647.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2410,1002 H2414 Q2398,1002 2398,1018 V1148.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2398,1148.0 Q2398,1164.0 2414,1164.0 H2442" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2432,1155.0 L2442,1164.0 L2432,1173.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3570,1002 H3574 Q3558,1002 3558,1018 V1434.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3558,1148.0 Q3558,1164.0 3574,1164.0 H3602" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3592,1155.0 L3602,1164.0 L3592,1173.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3558,1434.0 Q3558,1450.0 3574,1450.0 H3602" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3592,1441.0 L3602,1450.0 L3592,1459.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4730,1002 H4734 Q4718,1002 4718,1018 V1390.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4718,1148.0 Q4718,1164.0 4734,1164.0 H4762" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4752,1155.0 L4762,1164.0 L4752,1173.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4718,1390.0 Q4718,1406.0 4734,1406.0 H4762" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4752,1397.0 L4762,1406.0 L4752,1415.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5890,1002 H5894 Q5878,1002 5878,1018 V1148.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5878,1148.0 Q5878,1164.0 5894,1164.0 H5922" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5912,1155.0 L5922,1164.0 L5912,1173.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40.0" y="62.0" font-size="30" fill="#1B3A5C" font-weight="bold" text-anchor="start">Information architecture - Order team</text>
+<text x="40.0" y="96.0" font-size="17" fill="#555" font-weight="normal" text-anchor="start">The order team’s day: data upload, order generation, validation and approval, output and dispatch, order feedback and monitoring.</text>
+<rect x="40.0" y="130.0" width="34.0" height="22.0" rx="4" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="86.0" y="147.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">menu / screen and what the user can do there</text>
+<rect x="40.0" y="164.0" width="34.0" height="22.0" rx="4" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="86.0" y="181.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">where it is defined in the FRD, and the screen or figure that shows it</text>
+<text x="40.0" y="220.0" font-size="15" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm</text>
+<text x="200.0" y="220.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">= assembled by the analyst or taken from a source document; to be confirmed with the client</text>
+<text x="40.0" y="246.0" font-size="15" fill="#222" font-weight="bold" text-anchor="start">Screen - not shown</text>
+<text x="200.0" y="246.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">= no screen or wireframe yet</text>
+<rect x="3430.0" y="300.0" width="220.0" height="80.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="3540.0" y="348.0" font-size="19" fill="#222" font-weight="normal" text-anchor="middle">Start</text>
+<rect x="3370.0" y="440.0" width="340.0" height="80.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="3540.0" y="488.0" font-size="19" fill="#222" font-weight="normal" text-anchor="middle">Order Team Login</text>
+<rect x="3100.0" y="580.0" width="880.0" height="260.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="3136.0" y="626.0" font-size="19" fill="#222" font-weight="bold" text-anchor="start">Order Generation - Today</text>
+<text x="3136.0" y="652.0" font-size="14" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm: landing page assembled from <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-3-fr-014--order-generation-readiness"><tspan text-decoration="underline">FR-014</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu"><tspan text-decoration="underline">FR-023</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-5-fr-026--spm-order-feedback-update"><tspan text-decoration="underline">FR-026</tspan></a></text>
+<circle cx="3150.0" cy="679" r="3" fill="#222"/>
+<text x="3164.0" y="684.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Today's scheduled orders by dealer, with data upload expected - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.1"><tspan text-decoration="underline">FR-023.1</tspan></a></text>
+<circle cx="3150.0" cy="703" r="3" fill="#222"/>
+<text x="3164.0" y="708.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Carried forward: past orders not yet generated - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.3"><tspan text-decoration="underline">FR-023.3</tspan></a></text>
+<circle cx="3150.0" cy="727" r="3" fill="#222"/>
+<text x="3164.0" y="732.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Ready for generation (data uploaded, validated, no exceptions) - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-014.4"><tspan text-decoration="underline">FR-014.4</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.5"><tspan text-decoration="underline">023.5</tspan></a></text>
+<circle cx="3150.0" cy="751" r="3" fill="#222"/>
+<text x="3164.0" y="756.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Dealers that also need a sister-location order - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.2"><tspan text-decoration="underline">FR-023.2</tspan></a></text>
+<circle cx="3150.0" cy="775" r="3" fill="#222"/>
+<text x="3164.0" y="780.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Flagged after validation (deviation from past orders) - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.6"><tspan text-decoration="underline">FR-023.6</tspan></a></text>
+<circle cx="3150.0" cy="799" r="3" fill="#222"/>
+<text x="3164.0" y="804.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Order feedback done / not done alerts - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.5"><tspan text-decoration="underline">FR-026.5</tspan></a></text>
+<rect x="90.0" y="970.0" width="320.0" height="64.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="250.0" y="1000.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Data Upload</text>
+<text x="250.0" y="1022.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-5--m001---data-upload-and-mapping"><tspan text-decoration="underline">M001</tspan></a>  ·  FRD 5.4 - 5.5</text>
+<rect x="130.0" y="1084.0" width="540.0" height="186.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="150.0" y="1122.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Upload Dealer Files</text>
+<text x="150.0" y="1144.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="162" cy="1161" r="2.6" fill="#222"/>
+<text x="174.0" y="1166.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Upload a brand file per data type and location</text>
+<circle cx="162" cy="1183" r="2.6" fill="#222"/>
+<text x="174.0" y="1188.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Files from several logins combined</text>
+<circle cx="162" cy="1205" r="2.6" fill="#222"/>
+<text x="174.0" y="1210.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Location read from the file name</text>
+<circle cx="162" cy="1227" r="2.6" fill="#222"/>
+<text x="174.0" y="1232.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Fresh upload or old uploaded data</text>
+<rect x="710.0" y="1084.0" width="420.0" height="306.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="730.0" y="1122.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="742" cy="1139" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1144.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-5-4-fr-002--data-upload-and-parameter-mapping"><tspan text-decoration="underline">5.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-002.1"><tspan text-decoration="underline">FR-002.1</tspan></a></text>
+<circle cx="742" cy="1161" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1166.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-5-5-fr-003--upload-validation-and-multi-file-consolidation"><tspan text-decoration="underline">5.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-003.5"><tspan text-decoration="underline">FR-003.5</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-003.7"><tspan text-decoration="underline">003.7</tspan></a></text>
+<circle cx="742" cy="1183" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1188.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-3-fr-014--order-generation-readiness"><tspan text-decoration="underline">9.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-014.6"><tspan text-decoration="underline">FR-014.6</tspan></a></text>
+<text x="730.0" y="1210.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="742" cy="1227" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1232.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">S01 Data upload and mapping (Excel today)</text>
+<circle cx="742" cy="1249" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1254.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Figures 5.5.1a - 5.5.1c</text>
+<text x="730.0" y="1276.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="742" cy="1293" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1298.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-09-upload-dealer-files.html"><tspan text-decoration="underline">WF-09</tspan></a> Upload Dealer Files</text>
+<text x="730.0" y="1320.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="742" cy="1337" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1342.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m001-data-upload-and-mapping.html#W2"><tspan text-decoration="underline">W2</tspan></a> Upload dealer data and validate</text>
+<circle cx="742" cy="1359" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1364.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m001-data-upload-and-mapping.html#W13"><tspan text-decoration="underline">W13</tspan></a> Receive dealer data files</text>
+<rect x="130.0" y="1436.0" width="540.0" height="142.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="150.0" y="1474.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Validation Results</text>
+<text x="150.0" y="1496.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="162" cy="1513" r="2.6" fill="#222"/>
+<text x="174.0" y="1518.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Missing required column shown in red with its name</text>
+<circle cx="162" cy="1535" r="2.6" fill="#222"/>
+<text x="174.0" y="1540.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Required column list per brand / data type</text>
+<rect x="710.0" y="1436.0" width="420.0" height="174.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="730.0" y="1474.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="742" cy="1491" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1496.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-5-5-fr-003--upload-validation-and-multi-file-consolidation"><tspan text-decoration="underline">5.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-003.2"><tspan text-decoration="underline">FR-003.2</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-003.8"><tspan text-decoration="underline">003.8</tspan></a></text>
+<text x="730.0" y="1518.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="742" cy="1535" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1540.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<text x="730.0" y="1562.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="742" cy="1579" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1584.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-10-validation-results.html"><tspan text-decoration="underline">WF-10</tspan></a> Validation Results</text>
+<rect x="130.0" y="1656.0" width="540.0" height="142.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="150.0" y="1694.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Upload History</text>
+<text x="150.0" y="1716.0" font-size="13.5" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Reference FRD - confirm</text>
+<circle cx="162" cy="1733" r="2.6" fill="#222"/>
+<text x="174.0" y="1738.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Each upload kept as a batch: user, time, file, rows, status</text>
+<circle cx="162" cy="1755" r="2.6" fill="#222"/>
+<text x="174.0" y="1760.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Original file kept</text>
+<rect x="710.0" y="1656.0" width="420.0" height="174.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="730.0" y="1694.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="742" cy="1711" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1716.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-5-5-fr-003--upload-validation-and-multi-file-consolidation"><tspan text-decoration="underline">5.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-003.9"><tspan text-decoration="underline">FR-003.9</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-003.10"><tspan text-decoration="underline">003.10</tspan></a></text>
+<text x="730.0" y="1738.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="742" cy="1755" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1760.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<text x="730.0" y="1782.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="742" cy="1799" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1804.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-11-upload-history.html"><tspan text-decoration="underline">WF-11</tspan></a> Upload History</text>
+<rect x="1250.0" y="970.0" width="320.0" height="64.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="1410.0" y="1000.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Order Generation</text>
+<text x="1410.0" y="1022.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-9--m005---order-generation"><tspan text-decoration="underline">M005</tspan></a>  ·  FRD 9.3 - 9.5</text>
+<rect x="1290.0" y="1084.0" width="540.0" height="164.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="1310.0" y="1122.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Scheduled Orders List</text>
+<text x="1310.0" y="1144.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="1322" cy="1161" r="2.6" fill="#222"/>
+<text x="1334.0" y="1166.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Day's scheduled orders plus carried-forward ones</text>
+<circle cx="1322" cy="1183" r="2.6" fill="#222"/>
+<text x="1334.0" y="1188.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Consignee category, status, due dates, last MAX</text>
+<circle cx="1322" cy="1205" r="2.6" fill="#222"/>
+<text x="1334.0" y="1210.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">OGS settings that apply</text>
+<rect x="1870.0" y="1084.0" width="420.0" height="218.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="1890.0" y="1122.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="1902" cy="1139" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1144.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu"><tspan text-decoration="underline">9.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.1"><tspan text-decoration="underline">FR-023.1</tspan></a> to <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.3"><tspan text-decoration="underline">023.3</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.7"><tspan text-decoration="underline">023.7</tspan></a>,</text>
+<text x="1914.0" y="1166.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.12"><tspan text-decoration="underline">023.12</tspan></a></text>
+<text x="1890.0" y="1188.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="1902" cy="1205" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1210.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">S05 Order Generation page (new)</text>
+<circle cx="1902" cy="1227" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1232.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Requirement sheet (Figure 9.4.1a)</text>
+<text x="1890.0" y="1254.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="1902" cy="1271" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1276.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-27-scheduled-orders-list.html"><tspan text-decoration="underline">WF-27</tspan></a> Scheduled Orders List</text>
+<rect x="1290.0" y="1348.0" width="540.0" height="164.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="1310.0" y="1386.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Dealer Readiness &amp; Detail</text>
+<text x="1310.0" y="1408.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="1322" cy="1425" r="2.6" fill="#222"/>
+<text x="1334.0" y="1430.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Which required files are uploaded and validated</text>
+<circle cx="1322" cy="1447" r="2.6" fill="#222"/>
+<text x="1334.0" y="1452.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Ready indicator</text>
+<circle cx="1322" cy="1469" r="2.6" fill="#222"/>
+<text x="1334.0" y="1474.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Information needed for this dealer's order</text>
+<rect x="1870.0" y="1348.0" width="420.0" height="262.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="1890.0" y="1386.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="1902" cy="1403" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1408.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-3-fr-014--order-generation-readiness"><tspan text-decoration="underline">9.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-014.3"><tspan text-decoration="underline">FR-014.3</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-014.4"><tspan text-decoration="underline">014.4</tspan></a></text>
+<circle cx="1902" cy="1425" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1430.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu"><tspan text-decoration="underline">9.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.4"><tspan text-decoration="underline">FR-023.4</tspan></a></text>
+<text x="1890.0" y="1452.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="1902" cy="1469" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1474.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">S04 Order Generate (current)</text>
+<circle cx="1902" cy="1491" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1496.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Figures 9.3.1a - 9.3.1c</text>
+<text x="1890.0" y="1518.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="1902" cy="1535" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1540.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-28-dealer-readiness-detail.html"><tspan text-decoration="underline">WF-28</tspan></a> Dealer Readiness &amp; Detail</text>
+<text x="1890.0" y="1562.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="1902" cy="1579" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1584.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W6"><tspan text-decoration="underline">W6</tspan></a> Generate scheduled orders</text>
+<rect x="1290.0" y="1656.0" width="540.0" height="142.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="1310.0" y="1694.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Generate Orders</text>
+<text x="1310.0" y="1716.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="1322" cy="1733" r="2.6" fill="#222"/>
+<text x="1334.0" y="1738.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Multi-select ready dealers and generate together</text>
+<circle cx="1322" cy="1755" r="2.6" fill="#222"/>
+<text x="1334.0" y="1760.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Include child stock / child MAX switches</text>
+<rect x="1870.0" y="1656.0" width="420.0" height="240.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="1890.0" y="1694.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="1902" cy="1711" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1716.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu"><tspan text-decoration="underline">9.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.5"><tspan text-decoration="underline">FR-023.5</tspan></a></text>
+<circle cx="1902" cy="1733" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1738.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-3-fr-014--order-generation-readiness"><tspan text-decoration="underline">9.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-014.5"><tspan text-decoration="underline">FR-014.5</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-014.7"><tspan text-decoration="underline">014.7</tspan></a></text>
+<text x="1890.0" y="1760.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="1902" cy="1777" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1782.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">S04 / S05</text>
+<text x="1890.0" y="1804.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="1902" cy="1821" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1826.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-27-scheduled-orders-list.html"><tspan text-decoration="underline">WF-27</tspan></a> Scheduled Orders List (shared)</text>
+<text x="1890.0" y="1848.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="1902" cy="1865" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1870.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W6"><tspan text-decoration="underline">W6</tspan></a> Generate scheduled orders</text>
+<rect x="1290.0" y="1942.0" width="540.0" height="142.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="1310.0" y="1980.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Non-Scheduled Orders</text>
+<text x="1310.0" y="2002.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="1322" cy="2019" r="2.6" fill="#222"/>
+<text x="1334.0" y="2024.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Filters: category, order type, brand / dealer / location</text>
+<circle cx="1322" cy="2041" r="2.6" fill="#222"/>
+<text x="1334.0" y="2046.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Generate on request</text>
+<rect x="1870.0" y="1942.0" width="420.0" height="240.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="1890.0" y="1980.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="1902" cy="1997" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2002.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu"><tspan text-decoration="underline">9.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.9"><tspan text-decoration="underline">FR-023.9</tspan></a></text>
+<text x="1890.0" y="2024.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="1902" cy="2041" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2046.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Requirement sheet only (Figure 9.4.1a)</text>
+<circle cx="1902" cy="2063" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2068.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<text x="1890.0" y="2090.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="1902" cy="2107" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2112.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-29-non-scheduled-orders.html"><tspan text-decoration="underline">WF-29</tspan></a> Non-Scheduled Orders</text>
+<text x="1890.0" y="2134.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="1902" cy="2151" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2156.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W7"><tspan text-decoration="underline">W7</tspan></a> Build a non-scheduled or ad hoc order</text>
+<rect x="1290.0" y="2228.0" width="540.0" height="164.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="1310.0" y="2266.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Adjustments</text>
+<text x="1310.0" y="2288.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="1322" cy="2305" r="2.6" fill="#222"/>
+<text x="1334.0" y="2310.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Variance stock list</text>
+<circle cx="1322" cy="2327" r="2.6" fill="#222"/>
+<text x="1334.0" y="2332.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Ad hoc order to a target value, include / exclude lists</text>
+<circle cx="1322" cy="2349" r="2.6" fill="#222"/>
+<text x="1334.0" y="2354.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">OOQ exclusion list (always / today)</text>
+<rect x="1870.0" y="2228.0" width="420.0" height="284.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="1890.0" y="2266.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="1902" cy="2283" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2288.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-5-fr-024--order-generation-page---adjustments-and-visibili"><tspan text-decoration="underline">9.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-024.1"><tspan text-decoration="underline">FR-024.1</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-024.2"><tspan text-decoration="underline">024.2</tspan></a></text>
+<circle cx="1902" cy="2305" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2310.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu"><tspan text-decoration="underline">9.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.10"><tspan text-decoration="underline">FR-023.10</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.11"><tspan text-decoration="underline">023.11</tspan></a></text>
+<text x="1890.0" y="2332.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="1902" cy="2349" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2354.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<text x="1890.0" y="2376.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="1902" cy="2393" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2398.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-30-adjustments.html"><tspan text-decoration="underline">WF-30</tspan></a> Adjustments</text>
+<text x="1890.0" y="2420.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="1902" cy="2437" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2442.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W6"><tspan text-decoration="underline">W6</tspan></a> Generate scheduled orders</text>
+<circle cx="1902" cy="2459" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2464.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W7"><tspan text-decoration="underline">W7</tspan></a> Build a non-scheduled or ad hoc order</text>
+<circle cx="1902" cy="2481" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2486.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W8"><tspan text-decoration="underline">W8</tspan></a> Adjust inputs before generation</text>
+<rect x="1290.0" y="2558.0" width="540.0" height="164.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="1310.0" y="2596.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Order Context</text>
+<text x="1310.0" y="2618.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="1322" cy="2635" r="2.6" fill="#222"/>
+<text x="1334.0" y="2640.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">OOQ rule and ordering sequence applied</text>
+<circle cx="1322" cy="2657" r="2.6" fill="#222"/>
+<text x="1334.0" y="2662.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Stock and OOQ summary; past two orders</text>
+<circle cx="1322" cy="2679" r="2.6" fill="#222"/>
+<text x="1334.0" y="2684.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Status of last order feedback</text>
+<rect x="1870.0" y="2558.0" width="420.0" height="218.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="1890.0" y="2596.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="1902" cy="2613" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2618.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-5-fr-024--order-generation-page---adjustments-and-visibili"><tspan text-decoration="underline">9.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-024.3"><tspan text-decoration="underline">FR-024.3</tspan></a> to <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-024.5"><tspan text-decoration="underline">024.5</tspan></a></text>
+<text x="1890.0" y="2640.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="1902" cy="2657" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2662.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<text x="1890.0" y="2684.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="1902" cy="2701" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2706.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-28-dealer-readiness-detail.html"><tspan text-decoration="underline">WF-28</tspan></a> Dealer Readiness &amp; Detail (shared)</text>
+<text x="1890.0" y="2728.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="1902" cy="2745" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="2750.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W8"><tspan text-decoration="underline">W8</tspan></a> Adjust inputs before generation</text>
+<rect x="2410.0" y="970.0" width="320.0" height="64.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="2570.0" y="1000.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Validation &amp; Approval</text>
+<text x="2570.0" y="1022.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-9--m005---order-generation"><tspan text-decoration="underline">M005</tspan></a>  ·  FRD 9.4</text>
+<rect x="2450.0" y="1084.0" width="540.0" height="186.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="2470.0" y="1122.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Order Day Tracker</text>
+<text x="2470.0" y="1144.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="2482" cy="1161" r="2.6" fill="#222"/>
+<text x="2494.0" y="1166.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Per order: summary and downloads</text>
+<circle cx="2482" cy="1183" r="2.6" fill="#222"/>
+<text x="2494.0" y="1188.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Deviation from past orders flagged with basis</text>
+<circle cx="2482" cy="1205" r="2.6" fill="#222"/>
+<text x="2494.0" y="1210.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Approve / Regenerate / Not Sent (remark)</text>
+<circle cx="2482" cy="1227" r="2.6" fill="#222"/>
+<text x="2494.0" y="1232.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Regenerate after corrected data</text>
+<rect x="3030.0" y="1084.0" width="420.0" height="284.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="3050.0" y="1122.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="3062" cy="1139" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1144.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu"><tspan text-decoration="underline">9.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.6"><tspan text-decoration="underline">FR-023.6</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.8"><tspan text-decoration="underline">023.8</tspan></a></text>
+<text x="3050.0" y="1166.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="3062" cy="1183" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1188.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">S06 Order Day Tracker (current)</text>
+<circle cx="3062" cy="1205" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1210.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Figures 9.4.1b, 9.4.1c</text>
+<text x="3050.0" y="1232.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="3062" cy="1249" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1254.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-31-order-day-tracker.html"><tspan text-decoration="underline">WF-31</tspan></a> Order Day Tracker</text>
+<text x="3050.0" y="1276.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="3062" cy="1293" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1298.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W6"><tspan text-decoration="underline">W6</tspan></a> Generate scheduled orders</text>
+<circle cx="3062" cy="1315" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1320.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W7"><tspan text-decoration="underline">W7</tspan></a> Build a non-scheduled or ad hoc order</text>
+<circle cx="3062" cy="1337" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1342.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m005-order-generation.html#W9"><tspan text-decoration="underline">W9</tspan></a> Review, approve or regenerate an order</text>
+<rect x="3570.0" y="970.0" width="320.0" height="64.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="3730.0" y="1000.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Output &amp; Dispatch</text>
+<text x="3730.0" y="1022.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-10--m006---order-output--notifications-and-feedback"><tspan text-decoration="underline">M006</tspan></a>  ·  FRD 10.3 - 10.4</text>
+<rect x="3610.0" y="1084.0" width="540.0" height="164.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="3630.0" y="1122.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Order Output</text>
+<text x="3630.0" y="1144.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="3642" cy="1161" r="2.6" fill="#222"/>
+<text x="3654.0" y="1166.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Order file in the dealer's format</text>
+<circle cx="3642" cy="1183" r="2.6" fill="#222"/>
+<text x="3654.0" y="1188.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Non-editable and editable orders where set</text>
+<circle cx="3642" cy="1205" r="2.6" fill="#222"/>
+<text x="3654.0" y="1210.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">ITO output per location</text>
+<rect x="4190.0" y="1084.0" width="420.0" height="240.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="4210.0" y="1122.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="4222" cy="1139" r="2.6" fill="#0d2a12"/>
+<text x="4234.0" y="1144.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-3-fr-021--order-output-format"><tspan text-decoration="underline">10.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-021.1"><tspan text-decoration="underline">FR-021.1</tspan></a> to <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-021.6"><tspan text-decoration="underline">021.6</tspan></a></text>
+<circle cx="4222" cy="1161" r="2.6" fill="#0d2a12"/>
+<text x="4234.0" y="1166.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-7-9-fr-025--soq-rule-settings---editable-and-non-editable-or"><tspan text-decoration="underline">7.9</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-025.3"><tspan text-decoration="underline">FR-025.3</tspan></a></text>
+<circle cx="4222" cy="1183" r="2.6" fill="#0d2a12"/>
+<text x="4234.0" y="1188.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-8-6-fr-031--internal-transfer-parts-allocation-and-settings"><tspan text-decoration="underline">8.6</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-031.6"><tspan text-decoration="underline">FR-031.6</tspan></a></text>
+<text x="4210.0" y="1210.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="4222" cy="1227" r="2.6" fill="#0d2a12"/>
+<text x="4234.0" y="1232.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Current e-mail and Excel (Figures 10.3.1a,</text>
+<text x="4234.0" y="1254.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">10.3.1b)</text>
+<text x="4210.0" y="1276.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="4222" cy="1293" r="2.6" fill="#0d2a12"/>
+<text x="4234.0" y="1298.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-34-order-output.html"><tspan text-decoration="underline">WF-34</tspan></a> Order Output</text>
+<rect x="3610.0" y="1370.0" width="540.0" height="142.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="3630.0" y="1408.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Notifications Sent</text>
+<text x="3630.0" y="1430.0" font-size="13.5" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm</text>
+<circle cx="3642" cy="1447" r="2.6" fill="#222"/>
+<text x="3654.0" y="1452.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Order sent by the channels set for the location</text>
+<circle cx="3642" cy="1469" r="2.6" fill="#222"/>
+<text x="3654.0" y="1474.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Send log: time, channel, result</text>
+<rect x="4190.0" y="1370.0" width="420.0" height="174.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="4210.0" y="1408.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="4222" cy="1425" r="2.6" fill="#0d2a12"/>
+<text x="4234.0" y="1430.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-4-fr-022--notification-management"><tspan text-decoration="underline">10.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-022.1"><tspan text-decoration="underline">FR-022.1</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-022.2"><tspan text-decoration="underline">022.2</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-022.7"><tspan text-decoration="underline">022.7</tspan></a></text>
+<text x="4210.0" y="1452.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="4222" cy="1469" r="2.6" fill="#0d2a12"/>
+<text x="4234.0" y="1474.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<text x="4210.0" y="1496.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="4222" cy="1513" r="2.6" fill="#0d2a12"/>
+<text x="4234.0" y="1518.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-35-notifications-sent.html"><tspan text-decoration="underline">WF-35</tspan></a> Notifications Sent</text>
+<rect x="4730.0" y="970.0" width="320.0" height="64.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="4890.0" y="1000.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Order Feedback</text>
+<text x="4890.0" y="1022.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-10--m006---order-output--notifications-and-feedback"><tspan text-decoration="underline">M006</tspan></a> / <a href="../Sparecare_OGYS_FRD-v1.0.html#s-6--m002---ooq-rules"><tspan text-decoration="underline">M002</tspan></a>  ·  FRD 10.5, 6.4</text>
+<rect x="4770.0" y="1084.0" width="540.0" height="142.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="4790.0" y="1122.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Company PO File Upload</text>
+<text x="4790.0" y="1144.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="4802" cy="1161" r="2.6" fill="#222"/>
+<text x="4814.0" y="1166.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Upload order feedback / company PO file</text>
+<circle cx="4802" cy="1183" r="2.6" fill="#222"/>
+<text x="4814.0" y="1188.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Map company PO no. to Sparecare order no. and location</text>
+<rect x="5350.0" y="1084.0" width="420.0" height="196.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="5370.0" y="1122.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="5382" cy="1139" r="2.6" fill="#0d2a12"/>
+<text x="5394.0" y="1144.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-5-3-fr-001--data-upload-settings"><tspan text-decoration="underline">5.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-001.5"><tspan text-decoration="underline">FR-001.5</tspan></a></text>
+<circle cx="5382" cy="1161" r="2.6" fill="#0d2a12"/>
+<text x="5394.0" y="1166.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-6-4-fr-007---fr-008--inter-location-ooq-calculation--excepti"><tspan text-decoration="underline">6.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-007.5"><tspan text-decoration="underline">FR-007.5</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-008.1"><tspan text-decoration="underline">FR-008.1</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-008.2"><tspan text-decoration="underline">008.2</tspan></a></text>
+<text x="5370.0" y="1188.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="5382" cy="1205" r="2.6" fill="#0d2a12"/>
+<text x="5394.0" y="1210.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<text x="5370.0" y="1232.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="5382" cy="1249" r="2.6" fill="#0d2a12"/>
+<text x="5394.0" y="1254.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-36-company-po-file-upload.html"><tspan text-decoration="underline">WF-36</tspan></a> Company PO File Upload</text>
+<rect x="4770.0" y="1326.0" width="540.0" height="164.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="4790.0" y="1364.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Feedback Status</text>
+<text x="4790.0" y="1386.0" font-size="13.5" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm</text>
+<circle cx="4802" cy="1403" r="2.6" fill="#222"/>
+<text x="4814.0" y="1408.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Feedback done / not done per order</text>
+<circle cx="4802" cy="1425" r="2.6" fill="#222"/>
+<text x="4814.0" y="1430.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Excess-ordered parts identified</text>
+<circle cx="4802" cy="1447" r="2.6" fill="#222"/>
+<text x="4814.0" y="1452.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Alternate part validation alerts</text>
+<rect x="5350.0" y="1326.0" width="420.0" height="174.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="5370.0" y="1364.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="5382" cy="1381" r="2.6" fill="#0d2a12"/>
+<text x="5394.0" y="1386.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-5-fr-026--spm-order-feedback-update"><tspan text-decoration="underline">10.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.3"><tspan text-decoration="underline">FR-026.3</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.5"><tspan text-decoration="underline">026.5</tspan></a></text>
+<text x="5370.0" y="1408.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="5382" cy="1425" r="2.6" fill="#0d2a12"/>
+<text x="5394.0" y="1430.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<text x="5370.0" y="1452.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="5382" cy="1469" r="2.6" fill="#0d2a12"/>
+<text x="5394.0" y="1474.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-37-feedback-status.html"><tspan text-decoration="underline">WF-37</tspan></a> Feedback Status</text>
+<rect x="5890.0" y="970.0" width="320.0" height="64.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="6050.0" y="1000.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Monitoring</text>
+<text x="6050.0" y="1022.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-14--m010---monitoring-and-dashboard"><tspan text-decoration="underline">M010</tspan></a>  ·  FRD 14.3  ·  next stage</text>
+<rect x="5930.0" y="1084.0" width="540.0" height="142.0" rx="8" fill="#F0EEE6" stroke="none" stroke-width="1.6"/>
+<text x="5950.0" y="1122.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Monitoring Dashboard (view)</text>
+<text x="5950.0" y="1144.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated (next stage)</text>
+<circle cx="5962" cy="1161" r="2.6" fill="#222"/>
+<text x="5974.0" y="1166.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Scheduled vs generated vs pending</text>
+<circle cx="5962" cy="1183" r="2.6" fill="#222"/>
+<text x="5974.0" y="1188.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Timeliness and missed steps</text>
+<rect x="6510.0" y="1084.0" width="420.0" height="174.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="6530.0" y="1122.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="6542" cy="1139" r="2.6" fill="#0d2a12"/>
+<text x="6554.0" y="1144.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-14-3-fr-029--monitoring-dashboard"><tspan text-decoration="underline">14.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-029.1"><tspan text-decoration="underline">FR-029.1</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-029.2"><tspan text-decoration="underline">029.2</tspan></a></text>
+<text x="6530.0" y="1166.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="6542" cy="1183" r="2.6" fill="#0d2a12"/>
+<text x="6554.0" y="1188.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<text x="6530.0" y="1210.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Wireframe</text>
+<circle cx="6542" cy="1227" r="2.6" fill="#0d2a12"/>
+<text x="6554.0" y="1232.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../wireframes/wf-52-monitoring-dashboard.html"><tspan text-decoration="underline">WF-52</tspan></a> Monitoring Dashboard (shared)</text></svg></div></div></main>
+<script>var s=1,box=document.getElementById('v'),img=box.querySelector('svg'),nw=parseFloat(img.getAttribute('width'));
+img.removeAttribute('height');img.style.display='block';img.style.height='auto';
+function fit(){s=box.clientWidth/nw;img.style.width=(nw*s)+'px'}
+function z(k){s*=k;img.style.width=(nw*s)+'px'}fit();
+if(s<0.4){s=0.75;img.style.width=(nw*s)+'px';box.scrollTop=0;box.scrollLeft=(box.scrollWidth-box.clientWidth)/2}</script></body></html>

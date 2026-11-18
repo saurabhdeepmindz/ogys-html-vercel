@@ -1,0 +1,8 @@
+# Never upload the token, the scripts, or the logs.
+.env
+.env.*
+StartStopScript/
+logs/
+*.log
+*.zip
+.vercel/

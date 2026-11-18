@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3600" height="1538" viewBox="0 0 3600 1538" font-family="Inter, Segoe UI, Arial, sans-serif"><title>Information architecture - Sales and Operations teams</title><defs></defs><rect width="3600" height="1538" fill="#fff"/><rect x="20.0" y="20.0" width="3560.0" height="1498.0" rx="0" fill="none" stroke="#CFCFCF" stroke-width="2"/>
+<path d="M1800.0,388 V432" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1791.0,422 L1800.0,432 L1809.0,422" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1800.0,528 V572" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1791.0,562 L1800.0,572 L1809.0,562" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1800.0,824 V886" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250.0,886 H2570.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250.0,886 V938" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M241.0,928 L250.0,938 L259.0,928" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1410.0,886 V938" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1401.0,928 L1410.0,938 L1419.0,928" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2570.0,886 V938" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2561.0,928 L2570.0,938 L2579.0,928" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90,978 H94 Q78,978 78,994 V1334.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78,1124.0 Q78,1140.0 94,1140.0 H122" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112,1131.0 L122,1140.0 L112,1149.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78,1334.0 Q78,1350.0 94,1350.0 H122" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112,1341.0 L122,1350.0 L112,1359.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1250,978 H1254 Q1238,978 1238,994 V1124.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1238,1124.0 Q1238,1140.0 1254,1140.0 H1282" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1272,1131.0 L1282,1140.0 L1272,1149.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2410,978 H2414 Q2398,978 2398,994 V1124.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2398,1124.0 Q2398,1140.0 2414,1140.0 H2442" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2432,1131.0 L2442,1140.0 L2432,1149.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40.0" y="62.0" font-size="30" fill="#1B3A5C" font-weight="bold" text-anchor="start">Information architecture - Sales and Operations teams</text>
+<text x="40.0" y="96.0" font-size="17" fill="#555" font-weight="normal" text-anchor="start">What the sales (FS / BDM / ZBDM) and operations (OC / BM) teams see for their own dealer locations.</text>
+<rect x="40.0" y="130.0" width="34.0" height="22.0" rx="4" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="86.0" y="147.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">menu / screen and what the user can do there</text>
+<rect x="40.0" y="164.0" width="34.0" height="22.0" rx="4" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="86.0" y="181.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">where it is defined in the FRD, and the screen or figure that shows it</text>
+<text x="40.0" y="220.0" font-size="15" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm</text>
+<text x="200.0" y="220.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">= assembled by the analyst or taken from a source document; to be confirmed with the client</text>
+<text x="40.0" y="246.0" font-size="15" fill="#222" font-weight="bold" text-anchor="start">Screen - not shown</text>
+<text x="200.0" y="246.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">= no screen or wireframe yet</text>
+<rect x="1690.0" y="300.0" width="220.0" height="80.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1800.0" y="348.0" font-size="19" fill="#222" font-weight="normal" text-anchor="middle">Start</text>
+<rect x="1630.0" y="440.0" width="340.0" height="80.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1800.0" y="488.0" font-size="19" fill="#222" font-weight="normal" text-anchor="middle">Sales / Operations Login</text>
+<rect x="1360.0" y="580.0" width="880.0" height="236.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1396.0" y="626.0" font-size="19" fill="#222" font-weight="bold" text-anchor="start">My Locations Dashboard</text>
+<text x="1396.0" y="652.0" font-size="14" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm: these roles were named but their screens were not discussed; built from <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-027.7"><tspan text-decoration="underline">FR-027.7</tspan></a>,</text>
+<circle cx="1410.0" cy="679" r="3" fill="#222"/>
+<text x="1424.0" y="684.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Only the brands, dealers and locations assigned to me - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-027.7"><tspan text-decoration="underline">FR-027.7</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-028.2"><tspan text-decoration="underline">028.2</tspan></a></text>
+<circle cx="1410.0" cy="703" r="3" fill="#222"/>
+<text x="1424.0" y="708.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Scheduled vs generated vs pending orders for my locations - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-029.1"><tspan text-decoration="underline">FR-029.1</tspan></a></text>
+<circle cx="1410.0" cy="727" r="3" fill="#222"/>
+<text x="1424.0" y="732.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Timeliness: orders not done on time, steps missed - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-029.2"><tspan text-decoration="underline">FR-029.2</tspan></a></text>
+<circle cx="1410.0" cy="751" r="3" fill="#222"/>
+<text x="1424.0" y="756.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Locations waiting for data uploads - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-014.3"><tspan text-decoration="underline">FR-014.3</tspan></a></text>
+<circle cx="1410.0" cy="775" r="3" fill="#222"/>
+<text x="1424.0" y="780.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Order feedback not done - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.5"><tspan text-decoration="underline">FR-026.5</tspan></a></text>
+<rect x="90.0" y="946.0" width="320.0" height="64.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="250.0" y="976.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">My Dealers &amp; Locations</text>
+<text x="250.0" y="998.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-12--m008---dealer-and-location-management"><tspan text-decoration="underline">M008</tspan></a>  ·  FRD 12.3</text>
+<rect x="130.0" y="1060.0" width="540.0" height="164.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="150.0" y="1098.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Location Details (view)</text>
+<text x="150.0" y="1120.0" font-size="13.5" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm</text>
+<circle cx="162" cy="1137" r="2.6" fill="#222"/>
+<text x="174.0" y="1142.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Ordering days, sales and operations team</text>
+<circle cx="162" cy="1159" r="2.6" fill="#222"/>
+<text x="174.0" y="1164.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Dealer contacts and hierarchy</text>
+<circle cx="162" cy="1181" r="2.6" fill="#222"/>
+<text x="174.0" y="1186.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Rules that apply (OOQ, OGS, SOQ)</text>
+<rect x="710.0" y="1060.0" width="420.0" height="152.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="730.0" y="1098.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="742" cy="1115" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1120.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-12-3-fr-028--workshop--dealer-and-location--management"><tspan text-decoration="underline">12.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-028.2"><tspan text-decoration="underline">FR-028.2</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-028.3"><tspan text-decoration="underline">028.3</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-028.9"><tspan text-decoration="underline">028.9</tspan></a></text>
+<circle cx="742" cy="1137" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1142.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-11-3-fr-027--user-and-contact-management"><tspan text-decoration="underline">11.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-027.4"><tspan text-decoration="underline">FR-027.4</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-027.5"><tspan text-decoration="underline">027.5</tspan></a></text>
+<text x="730.0" y="1164.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="742" cy="1181" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1186.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<rect x="130.0" y="1270.0" width="540.0" height="142.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="150.0" y="1308.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Request to Edit</text>
+<text x="150.0" y="1330.0" font-size="13.5" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Reference FRD - confirm</text>
+<circle cx="162" cy="1347" r="2.6" fill="#222"/>
+<text x="174.0" y="1352.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">View-only user raises a request</text>
+<circle cx="162" cy="1369" r="2.6" fill="#222"/>
+<text x="174.0" y="1374.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Goes to the user above for approval</text>
+<rect x="710.0" y="1270.0" width="420.0" height="130.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="730.0" y="1308.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="742" cy="1325" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1330.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-11-3-fr-027--user-and-contact-management"><tspan text-decoration="underline">11.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-027.6"><tspan text-decoration="underline">FR-027.6</tspan></a></text>
+<text x="730.0" y="1352.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="742" cy="1369" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1374.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<rect x="1250.0" y="946.0" width="320.0" height="64.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1410.0" y="976.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Order Status</text>
+<text x="1410.0" y="998.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-9--m005---order-generation"><tspan text-decoration="underline">M005</tspan></a> / <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10--m006---order-output--notifications-and-feedback"><tspan text-decoration="underline">M006</tspan></a>  ·  FRD 9.4, 10.5</text>
+<rect x="1290.0" y="1060.0" width="540.0" height="164.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1310.0" y="1098.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Orders of My Locations (view)</text>
+<text x="1310.0" y="1120.0" font-size="13.5" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm</text>
+<circle cx="1322" cy="1137" r="2.6" fill="#222"/>
+<text x="1334.0" y="1142.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Status, due date and next due date</text>
+<circle cx="1322" cy="1159" r="2.6" fill="#222"/>
+<text x="1334.0" y="1164.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Generated, approved, sent or not sent (with remark)</text>
+<circle cx="1322" cy="1181" r="2.6" fill="#222"/>
+<text x="1334.0" y="1186.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Feedback done / not done</text>
+<rect x="1870.0" y="1060.0" width="420.0" height="174.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="1890.0" y="1098.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="1902" cy="1115" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1120.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu"><tspan text-decoration="underline">9.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.7"><tspan text-decoration="underline">FR-023.7</tspan></a></text>
+<circle cx="1902" cy="1137" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1142.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-5-fr-026--spm-order-feedback-update"><tspan text-decoration="underline">10.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.5"><tspan text-decoration="underline">FR-026.5</tspan></a></text>
+<text x="1890.0" y="1164.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="1902" cy="1181" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1186.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Order Day Tracker style (S06) - to confirm</text>
+<circle cx="1902" cy="1203" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1208.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text>
+<rect x="2410.0" y="946.0" width="320.0" height="64.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="2570.0" y="976.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Monitoring</text>
+<text x="2570.0" y="998.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-14--m010---monitoring-and-dashboard"><tspan text-decoration="underline">M010</tspan></a>  ·  FRD 14.3  ·  next stage</text>
+<rect x="2450.0" y="1060.0" width="540.0" height="164.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="2470.0" y="1098.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Monitoring Dashboard</text>
+<text x="2470.0" y="1120.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated (next stage)</text>
+<circle cx="2482" cy="1137" r="2.6" fill="#222"/>
+<text x="2494.0" y="1142.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">By brand / dealer / location</text>
+<circle cx="2482" cy="1159" r="2.6" fill="#222"/>
+<text x="2494.0" y="1164.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Timeliness and missed steps</text>
+<circle cx="2482" cy="1181" r="2.6" fill="#222"/>
+<text x="2494.0" y="1186.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">One Pager (content to be defined)</text>
+<rect x="3030.0" y="1060.0" width="420.0" height="130.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="3050.0" y="1098.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="3062" cy="1115" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1120.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-14-3-fr-029--monitoring-dashboard"><tspan text-decoration="underline">14.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-029.1"><tspan text-decoration="underline">FR-029.1</tspan></a> to <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-029.3"><tspan text-decoration="underline">029.3</tspan></a></text>
+<text x="3050.0" y="1142.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="3062" cy="1159" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1164.0" font-size="15" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen - not shown (to be designed)</text></svg>

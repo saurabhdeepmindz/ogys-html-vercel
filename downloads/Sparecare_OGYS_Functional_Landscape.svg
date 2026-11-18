@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900" font-family="Inter, Segoe UI, Arial, sans-serif"><title>Functional landscape</title><defs></defs><rect width="1800" height="900" fill="#fff"/><text x="40.0" y="52.0" font-size="28" fill="#1B3A5C" font-weight="bold" text-anchor="start">Functional landscape</text>
+<text x="40.0" y="82.0" font-size="14.5" fill="#555555" font-weight="normal" text-anchor="start">The ten modules of OGYS in four bands, with their scope. Module numbers and names match the module sections of the FRD; click a module to open its section.</text>
+<rect x="40.0" y="112.0" width="1720.0" height="151.0" rx="12" fill="#FCEFE8" stroke="#E3DED6" stroke-width="1.2"/>
+<rect x="40.0" y="112.0" width="200.0" height="151.0" rx="12" fill="#FFFFFF" stroke="#E3DED6" stroke-width="1.2"/>
+<text x="140.0" y="175.5" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="middle">DATA AND MASTERS</text>
+<text x="140.0" y="196.5" font-size="11" fill="#6b6b6b" font-weight="normal" text-anchor="middle">IN SCOPE</text>
+<rect x="272.0" y="134.0" width="481.3" height="80.0" rx="10" fill="#FBE3D8" stroke="#E8A88C" stroke-width="1.6"/>
+<rect x="701.3" y="142.0" width="44.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#E8A88C" stroke-width="1"/>
+<text x="723.3" y="155.0" font-size="10.5" fill="#6b5a8a" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-5--m001---data-upload-and-mapping"><tspan text-decoration="underline">M001</tspan></a></text>
+<text x="512.7" y="164.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-5--m001---data-upload-and-mapping"><tspan text-decoration="underline">M001</tspan></a> · Data Upload and Mapping</text>
+<text x="512.7" y="184.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">brand files · columns · parameter mapping</text>
+<rect x="767.3" y="134.0" width="481.3" height="80.0" rx="10" fill="#FBE3D8" stroke="#E8A88C" stroke-width="1.6"/>
+<rect x="1196.7" y="142.0" width="44.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#E8A88C" stroke-width="1"/>
+<text x="1218.7" y="155.0" font-size="10.5" fill="#6b5a8a" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-11--m007---user-and-access-management"><tspan text-decoration="underline">M007</tspan></a></text>
+<text x="1008.0" y="164.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-11--m007---user-and-access-management"><tspan text-decoration="underline">M007</tspan></a> · User and Access Management</text>
+<text x="1008.0" y="184.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">profiles · rights · dealer hierarchy</text>
+<rect x="1262.7" y="134.0" width="481.3" height="80.0" rx="10" fill="#FBE3D8" stroke="#E8A88C" stroke-width="1.6"/>
+<rect x="1692.0" y="142.0" width="44.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#E8A88C" stroke-width="1"/>
+<text x="1714.0" y="155.0" font-size="10.5" fill="#6b5a8a" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-12--m008---dealer-and-location-management"><tspan text-decoration="underline">M008</tspan></a></text>
+<text x="1503.3" y="164.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-12--m008---dealer-and-location-management"><tspan text-decoration="underline">M008</tspan></a> · Dealer and Location Management</text>
+<text x="1503.3" y="184.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">dealers · locations · ordering days</text>
+<text x="272.0" y="240.0" font-size="12.5" fill="#6b6b6b" font-weight="normal" text-anchor="start" font-style="italic">Who uses the system, dealer and location records, and the data that comes in.</text>
+<polygon points="894.0,267 906.0,267 900.0,277" fill="#8b8b8b"/>
+<rect x="40.0" y="283.0" width="1720.0" height="169.0" rx="12" fill="#F8F5EF" stroke="#E3DED6" stroke-width="1.2"/>
+<rect x="40.0" y="283.0" width="200.0" height="169.0" rx="12" fill="#FFFFFF" stroke="#E3DED6" stroke-width="1.2"/>
+<text x="140.0" y="355.5" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="middle">RULES</text>
+<text x="140.0" y="376.5" font-size="11" fill="#6b6b6b" font-weight="normal" text-anchor="middle">IN SCOPE</text>
+<rect x="272.0" y="305.0" width="357.5" height="98.0" rx="10" fill="#FFFFFF" stroke="#CFC6B8" stroke-width="1.6"/>
+<rect x="577.5" y="313.0" width="44.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#CFC6B8" stroke-width="1"/>
+<text x="599.5" y="326.0" font-size="10.5" fill="#6b5a8a" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-6--m002---ooq-rules"><tspan text-decoration="underline">M002</tspan></a></text>
+<text x="450.8" y="335.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-6--m002---ooq-rules"><tspan text-decoration="underline">M002</tspan></a> · OOQ Rules</text>
+<text x="450.8" y="355.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">pending PO · in-transit · cancellable</text>
+<rect x="643.5" y="305.0" width="357.5" height="98.0" rx="10" fill="#FFFFFF" stroke="#CFC6B8" stroke-width="1.6"/>
+<rect x="949.0" y="313.0" width="44.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#CFC6B8" stroke-width="1"/>
+<text x="971.0" y="326.0" font-size="10.5" fill="#6b5a8a" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-7--m003---soq-rules"><tspan text-decoration="underline">M003</tspan></a></text>
+<text x="822.2" y="335.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-7--m003---soq-rules"><tspan text-decoration="underline">M003</tspan></a> · SOQ Rules</text>
+<text x="822.2" y="355.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">MAX - CS - OOQ + CBO · TOC · feedback</text>
+<rect x="1015.0" y="305.0" width="357.5" height="98.0" rx="10" fill="#FFFFFF" stroke="#CFC6B8" stroke-width="1.6"/>
+<rect x="1320.5" y="313.0" width="44.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#CFC6B8" stroke-width="1"/>
+<text x="1342.5" y="326.0" font-size="10.5" fill="#6b5a8a" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-8--m004---internal-transfers--auto-approval"><tspan text-decoration="underline">M004</tspan></a></text>
+<text x="1193.8" y="335.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-8--m004---internal-transfers--auto-approval"><tspan text-decoration="underline">M004</tspan></a> · Internal Transfers (Auto</text>
+<text x="1193.8" y="353.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle">Approval)</text>
+<text x="1193.8" y="373.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">sender rules · buyer rules · ITO</text>
+<rect x="1386.5" y="305.0" width="357.5" height="98.0" rx="10" fill="#FFFFFF" stroke="#CFC6B8" stroke-width="1.6" stroke-dasharray="7 5"/>
+<rect x="1650.0" y="313.0" width="86.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#CFC6B8" stroke-width="1"/>
+<text x="1693.0" y="326.0" font-size="10.5" fill="#8A4B2D" font-weight="bold" text-anchor="middle">TO CONFIRM</text>
+<text x="1565.2" y="335.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-13--m009---ogs-and-sister-rules"><tspan text-decoration="underline">M009</tspan></a> · OGS and Sister</text>
+<text x="1565.2" y="353.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle">Rules</text>
+<text x="1565.2" y="373.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">mother / child MAX · sister planning</text>
+<text x="272.0" y="429.0" font-size="12.5" fill="#6b6b6b" font-weight="normal" text-anchor="start" font-style="italic">How OOQ and SOQ are calculated, internal transfers and sister planning.</text>
+<polygon points="894.0,456 906.0,456 900.0,466" fill="#8b8b8b"/>
+<rect x="40.0" y="472.0" width="1720.0" height="151.0" rx="12" fill="#F1F6FB" stroke="#E3DED6" stroke-width="1.2"/>
+<rect x="40.0" y="472.0" width="200.0" height="151.0" rx="12" fill="#FFFFFF" stroke="#E3DED6" stroke-width="1.2"/>
+<text x="140.0" y="535.5" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="middle">ORDER PROCESSING</text>
+<text x="140.0" y="556.5" font-size="11" fill="#6b6b6b" font-weight="normal" text-anchor="middle">IN SCOPE</text>
+<rect x="272.0" y="494.0" width="729.0" height="80.0" rx="10" fill="#FFFFFF" stroke="#B9CBE0" stroke-width="1.6"/>
+<rect x="949.0" y="502.0" width="44.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#B9CBE0" stroke-width="1"/>
+<text x="971.0" y="515.0" font-size="10.5" fill="#6b5a8a" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-9--m005---order-generation"><tspan text-decoration="underline">M005</tspan></a></text>
+<text x="636.5" y="524.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-9--m005---order-generation"><tspan text-decoration="underline">M005</tspan></a> · Order Generation</text>
+<text x="636.5" y="544.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">scheduled list · generate · validate · approve</text>
+<rect x="1015.0" y="494.0" width="729.0" height="80.0" rx="10" fill="#FFFFFF" stroke="#B9CBE0" stroke-width="1.6"/>
+<rect x="1692.0" y="502.0" width="44.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#B9CBE0" stroke-width="1"/>
+<text x="1714.0" y="515.0" font-size="10.5" fill="#6b5a8a" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-10--m006---order-output--notifications-and-feedback"><tspan text-decoration="underline">M006</tspan></a></text>
+<text x="1379.5" y="524.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-10--m006---order-output--notifications-and-feedback"><tspan text-decoration="underline">M006</tspan></a> · Order Output, Notifications and Feedback</text>
+<text x="1379.5" y="544.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">order file · alerts · SPM feedback</text>
+<text x="272.0" y="600.0" font-size="12.5" fill="#6b6b6b" font-weight="normal" text-anchor="start" font-style="italic">Generating, checking and sending orders; output, notifications and dealer feedback.</text>
+<polygon points="894.0,627 906.0,627 900.0,637" fill="#8b8b8b"/>
+<rect x="40.0" y="643.0" width="1720.0" height="151.0" rx="12" fill="#F1EEF5" stroke="#E3DED6" stroke-width="1.2"/>
+<rect x="40.0" y="643.0" width="200.0" height="151.0" rx="12" fill="#FFFFFF" stroke="#E3DED6" stroke-width="1.2"/>
+<text x="140.0" y="706.5" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="middle">MONITORING</text>
+<text x="140.0" y="727.5" font-size="11" fill="#6b6b6b" font-weight="normal" text-anchor="middle">IN SCOPE - NEXT STAGE</text>
+<rect x="272.0" y="665.0" width="1472.0" height="80.0" rx="10" fill="#E9E3F6" stroke="#BCAEDD" stroke-width="1.6"/>
+<rect x="1650.0" y="673.0" width="86.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#BCAEDD" stroke-width="1"/>
+<text x="1693.0" y="686.0" font-size="10.5" fill="#8A4B2D" font-weight="bold" text-anchor="middle">NEXT STAGE</text>
+<text x="1008.0" y="695.0" font-size="14" fill="#1f2a37" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-14--m010---monitoring-and-dashboard"><tspan text-decoration="underline">M010</tspan></a> · Monitoring and Dashboard</text>
+<text x="1008.0" y="715.0" font-size="12" fill="#555" font-weight="normal" text-anchor="middle" font-style="italic">scheduled vs done · timeliness</text>
+<text x="272.0" y="771.0" font-size="12.5" fill="#6b6b6b" font-weight="normal" text-anchor="start" font-style="italic">Dashboards over the order process; described, not yet specified.</text>
+<text x="40.0" y="824.0" font-size="14" fill="#555" font-weight="normal" text-anchor="start">Four bands. <a href="../Sparecare_OGYS_FRD-v1.0.html#s-5--m001---data-upload-and-mapping"><tspan text-decoration="underline">M001</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-11--m007---user-and-access-management"><tspan text-decoration="underline">M007</tspan></a> and <a href="../Sparecare_OGYS_FRD-v1.0.html#s-12--m008---dealer-and-location-management"><tspan text-decoration="underline">M008</tspan></a> hold the data and masters; <a href="../Sparecare_OGYS_FRD-v1.0.html#s-6--m002---ooq-rules"><tspan text-decoration="underline">M002</tspan></a>-<a href="../Sparecare_OGYS_FRD-v1.0.html#s-8--m004---internal-transfers--auto-approval"><tspan text-decoration="underline">M004</tspan></a> and <a href="../Sparecare_OGYS_FRD-v1.0.html#s-13--m009---ogs-and-sister-rules"><tspan text-decoration="underline">M009</tspan></a> are the rules; <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9--m005---order-generation"><tspan text-decoration="underline">M005</tspan></a> and <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10--m006---order-output--notifications-and-feedback"><tspan text-decoration="underline">M006</tspan></a> process the order; <a href="../Sparecare_OGYS_FRD-v1.0.html#s-14--m010---monitoring-and-dashboard"><tspan text-decoration="underline">M010</tspan></a> monitors it. <a href="../Sparecare_OGYS_FRD-v1.0.html#s-13--m009---ogs-and-sister-rules"><tspan text-decoration="underline">M009</tspan></a> comes from the reference FRD and is to be confirmed (<a href="../Sparecare_OGYS_FRD-v1.0.html#s-18--open-issues"><tspan text-decoration="underline">OI-056</tspan></a>); <a href="../Sparecare_OGYS_FRD-v1.0.html#s-14--m010---monitoring-and-dashboard"><tspan text-decoration="underline">M010</tspan></a> is the next</text>
+<text x="40.0" y="844.0" font-size="14" fill="#555" font-weight="normal" text-anchor="start">stage (<a href="../Sparecare_OGYS_FRD-v1.0.html#s-18--open-issues"><tspan text-decoration="underline">OI-053</tspan></a>).</text>
+<rect x="40.0" y="858.0" width="30.0" height="18.0" rx="5" fill="#EEF3FA" stroke="#2E6DA4" stroke-width="1.6"/>
+<text x="80.0" y="872.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">stated module</text>
+<rect x="203.7" y="858.0" width="30.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#888888" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="243.7" y="872.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">indicative / to confirm</text>
+<rect x="436.4" y="858.0" width="44.0" height="18.0" rx="5" fill="#FFFFFF" stroke="#B9AFCF" stroke-width="1"/>
+<text x="458.4" y="871.0" font-size="10.5" fill="#6b5a8a" font-weight="bold" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-5--m001---data-upload-and-mapping"><tspan text-decoration="underline">M001</tspan></a></text>
+<text x="490.4" y="872.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">module id, or its scope when not in scope</text></svg>

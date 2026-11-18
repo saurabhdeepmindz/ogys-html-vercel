@@ -1,0 +1,218 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>State machine of an order (UML)</title><style>:root{--navy:#1B3A5C;--ink:#222;--muted:#555;--bg:#fff;--card:#F7F8FA;--line:#DDE2E8}
+@media (prefers-color-scheme:dark){:root{--navy:#9CC3EA;--ink:#e8e8e8;--muted:#b0b0b0;--bg:#16181c;--card:#1f2329;--line:#333a44}}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{padding:22px 28px;border-bottom:1px solid var(--line)}h1{margin:0;font-size:24px;color:var(--navy)}
+.sub{color:var(--muted);margin-top:6px;font-size:14px;line-height:1.45}main{padding:20px 28px;max-width:1500px}
+h2{color:var(--navy);font-size:19px;margin:26px 0 10px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit;display:block}
+.card .thumb{background:#fff;border-radius:8px;height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.card .thumb img{max-width:100%;max-height:100%}.card b{display:block;margin-top:10px;color:var(--navy)}.card span{font-size:13px;color:var(--muted)}
+.empty{font-style:italic;color:var(--muted)}.bar{display:flex;gap:8px;align-items:center;margin:10px 0}
+button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px}
+.view{border:1px solid var(--line);border-radius:10px;overflow:auto;background:#fff;max-height:78vh}.view img{display:block;transform-origin:0 0}
+.vwrap{position:relative}.full{position:absolute;top:8px;right:22px;z-index:2;background:#fff;border:1px solid var(--line);
+border-radius:8px;padding:4px 10px;font-size:18px;text-decoration:none;color:var(--navy);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.full:hover{border-color:#2E6DA4}
+.meta{font-size:14px;line-height:1.6}.meta td{padding:3px 12px 3px 0;vertical-align:top}a{color:#2E6DA4}
+@media (max-width:600px){header,main{padding:14px 16px}}@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Inter';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-wght-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-ext-wght-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Serif 4';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-wght-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Serif 4';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-ext-wght-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'JetBrains Mono';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--ink:#191919;--ink-2:#33322E;--paper:#FAF9F5;--paper-2:#F0EEE6;--paper-3:#E8E6DC;--surface:#fff;--accent:#D97757;--accent-deep:#B85F3E;--accent-soft:#FBEDE7;--accent-ink:#A04E2F;--border:#E4E1D8;--border-strong:#CFCBBD;--muted:#6E6C64;--muted-2:#98958B}body{font-family:Inter,"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+header{background:var(--surface);border-bottom:1px solid var(--border)}
+h1{font:600 30px/1.2 "Source Serif 4",Georgia,"Times New Roman",serif;color:var(--ink)}h2{font:600 21px/1.3 "Source Serif 4",Georgia,"Times New Roman",serif;color:var(--ink)}
+.sub{color:var(--ink-2)}.meta td:first-child{color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+button{background:var(--surface);border:1px solid var(--border-strong);color:var(--ink);border-radius:9px}
+button:hover{border-color:var(--accent);color:var(--accent-ink)}
+.view{border:1px solid var(--border);border-radius:14px}
+.full{border:1px solid var(--accent);color:#fff;background:var(--accent);border-radius:9px;box-shadow:0 0 0 4px var(--accent-soft)}
+.full:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px}.card .thumb{background:var(--paper)}
+.card b{color:var(--ink)}a{color:var(--accent-ink)}.embedded .back{display:none}</style><script>if(window.self!==window.top)document.documentElement.classList.add('embedded')</script></head><body>
+<header><h1>State machine of an order (UML)</h1><div class="sub">The life of one order - one dealer location, one run - from Due to Closed, with the flagged, not-sent and feedback paths. Transitions read  event [guard] / effect.</div></header><main>
+<table class="meta"><tr><td>Reference</td><td>V03 · State machine (UML)</td></tr>
+<tr><td>Status</td><td>Assumed - confirm</td></tr><tr><td>Requirements cited</td><td><a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-3-fr-014--order-generation-readiness">FR-014</a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-9-4-fr-023--order-generation-page---scheduled-and-non-schedu">FR-023</a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-5-fr-026--spm-order-feedback-update">FR-026</a></td></tr></table>
+<div class="bar"><button onclick="z(1.25)">Zoom in</button><button onclick="z(0.8)">Zoom out</button><button onclick="fit()">Fit width</button>
+<a href="v03-state-machine-of-an-order-uml.svg" download>Download SVG</a><span class="back"> · <a href="index.html">All diagrams</a> · <a href="https://ogys-html-vercel.vercel.app/Sparecare_OGYS_FRD-v1.0.html">open the FRD</a></span></div>
+<p class="sub" style="margin:4px 0 8px">Underlined references open the FRD section, the requirement or the workflow.</p>
+<div class="vwrap"><a class="full" href="v03-state-machine-of-an-order-uml.svg" target="_blank" rel="noopener" title="Open the whole diagram in a new tab">&#8599;</a>
+<div class="view" id="v"><svg xmlns="http://www.w3.org/2000/svg" width="2225" height="1563" viewBox="0 0 2225 1563" font-family="Inter, Segoe UI, Arial, sans-serif"><title>State machine of an order (UML)</title><defs><style>@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Inter';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-wght-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/inter-latin-ext-wght-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Serif 4';font-style:normal;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-ext-wght-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Source Serif 4';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-wght-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Source Serif 4';font-style:italic;font-display:swap;font-weight:200 900;src:url(fonts/source-serif-4-latin-ext-wght-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'JetBrains Mono';font-style:normal;font-display:swap;font-weight:400;src:url(fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style><marker id="m2E7D32" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L11,6 L1,11 Z" fill="#2E7D32"/></marker><marker id="m33475b" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L11,6 L1,11 Z" fill="#33475b"/></marker></defs><rect width="2225" height="1563" fill="#fff"/><rect x="946.4" y="150.0" width="832.2" height="370.0" rx="20" fill="#FAFBFD" stroke="#33475b" stroke-width="2"/>
+<path d="M946.4,170.0 Q946.4,150.0 966.4,150.0 H1088.2 V178.0 H946.4 Z" fill="#E7ECF3" stroke="#33475b" stroke-width="2"/>
+<text x="960.4" y="170.0" font-size="14.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">In generation</text>
+<path d="M222,182 V192 H222 V202" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M335,248 H414 V248 H494" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M522,248 H610 V248 H698" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M508,262 V332 H508 V402" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M462.5,494.0 C462.5,554.0 552.5,554.0 552.5,496.0" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M620,448 H792 V294" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M887,248 H932 V248 H976" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1179,248 H1264 V248 H1348" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1376,248 H1461 V248 H1546" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1362,262 V332 H1362 V402" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1255,448 H1078 V294" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1749,248 H1788 V248 H1828" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1470,448 L1790,448 L1790,274 L1828,273" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1362,520 V565 H1078 V610" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1078,686 V746 H1078 V806" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1932,294 V348 H1932 V402" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1932,494 V548 H1932 V602" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1820.0,629.6 C1750.0,629.6 1750.0,675.6 1822.0,675.6" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1932,694 V748 H1932 V802" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1820,848 H1768 V848 H1715" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1602,810 V818 H1374" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1602,886 L1602,918 L222,918 L222,294" fill="none" stroke="#2E7D32" stroke-width="1.9" stroke-dasharray="7 5" marker-end="url(#m2E7D32)" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="40.0" y="118.0" width="2145.0" height="850.0" rx="0" fill="none" stroke="#33475b" stroke-width="1.5"/>
+<path d="M40,118 H373.4 V140 L359.4,154 H40 Z" fill="#F0F3F7" stroke="#33475b" stroke-width="1.5"/>
+<text x="50.0" y="142.0" font-size="14" fill="#1B3A5C" font-weight="bold" text-anchor="start">stm  Order (dealer location, one run)</text>
+<text x="40.0" y="52.0" font-size="28" fill="#1B3A5C" font-weight="bold" text-anchor="start">State machine of an order (UML)</text>
+<text x="40.0" y="82.0" font-size="14.5" fill="#555555" font-weight="normal" text-anchor="start">The life of one order - one dealer location, one run - from Due to Closed, with the flagged, not-sent and feedback paths. Transitions read  event [guard] / effect.</text>
+<rect x="110.0" y="202.0" width="225.0" height="92.0" rx="16" fill="#EEF3FA" stroke="#2E6DA4" stroke-width="2"/>
+<text x="222.5" y="227.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Due</text>
+<line x1="110.0" y1="238.0" x2="335.0" y2="238.0" stroke="#2E6DA4" stroke-width="1.2"/>
+<text x="120.0" y="257.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / appears in today’s list</text>
+<text x="120.0" y="273.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">with the data uploads it needs</text>
+<rect x="395.0" y="402.0" width="225.0" height="92.0" rx="16" fill="#FFF6F6" stroke="#C0392B" stroke-width="2"/>
+<text x="507.5" y="427.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Awaiting Data</text>
+<line x1="395.0" y1="438.0" x2="620.0" y2="438.0" stroke="#C0392B" stroke-width="1.2"/>
+<text x="405.0" y="457.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / missing uploads shown in red</text>
+<text x="405.0" y="473.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">do / accept and validate uploads</text>
+<rect x="698.0" y="202.0" width="189.0" height="92.0" rx="16" fill="#EEF7EE" stroke="#2E7D32" stroke-width="2"/>
+<text x="792.5" y="227.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Ready</text>
+<line x1="698.0" y1="238.0" x2="887.0" y2="238.0" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="708.0" y="257.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / dealer selectable</text>
+<text x="708.0" y="273.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">(multi-select)</text>
+<rect x="976.4" y="202.0" width="202.2" height="92.0" rx="16" fill="#FFF4E5" stroke="#C77700" stroke-width="2"/>
+<text x="1077.5" y="227.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Generated</text>
+<line x1="976.4" y1="238.0" x2="1178.6" y2="238.0" stroke="#C77700" stroke-width="1.2"/>
+<text x="986.4" y="257.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">do / OOQ, CBO, SOQ per part</text>
+<text x="986.4" y="273.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">do / adjustments, sequence</text>
+<rect x="1546.4" y="210.0" width="202.2" height="76.0" rx="16" fill="#EEF7EE" stroke="#2E7D32" stroke-width="2"/>
+<text x="1647.5" y="235.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Validated</text>
+<line x1="1546.4" y1="246.0" x2="1748.6" y2="246.0" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="1556.4" y="265.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / summary vs last run</text>
+<rect x="1254.8" y="402.0" width="215.4" height="92.0" rx="16" fill="#FFF6F6" stroke="#C0392B" stroke-width="2"/>
+<text x="1362.5" y="427.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Flagged</text>
+<line x1="1254.8" y1="438.0" x2="1470.2" y2="438.0" stroke="#C0392B" stroke-width="1.2"/>
+<text x="1264.8" y="457.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / deviation highlighted</text>
+<text x="1264.8" y="473.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">do / view, edit or upload</text>
+<rect x="1828.1" y="202.0" width="208.8" height="92.0" rx="16" fill="#EEF7EE" stroke="#2E7D32" stroke-width="2"/>
+<text x="1932.5" y="227.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Approved</text>
+<line x1="1828.1" y1="238.0" x2="2036.9" y2="238.0" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="1838.1" y="257.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / order lines fixed</text>
+<text x="1838.1" y="273.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">do / build output per format</text>
+<rect x="1821.5" y="402.0" width="222.0" height="92.0" rx="16" fill="#EEF7EE" stroke="#2E7D32" stroke-width="2"/>
+<text x="1932.5" y="427.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Sent</text>
+<line x1="1821.5" y1="438.0" x2="2043.5" y2="438.0" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="1831.5" y="457.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / e-mail + Excel, alerts</text>
+<text x="1831.5" y="473.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">do / visible on dealer side</text>
+<rect x="989.6" y="610.0" width="175.8" height="76.0" rx="16" fill="#F4F4F4" stroke="#777777" stroke-width="2"/>
+<text x="1077.5" y="635.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Not Sent</text>
+<line x1="989.6" y1="646.0" x2="1165.4" y2="646.0" stroke="#777777" stroke-width="1.2"/>
+<text x="999.6" y="665.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / remark required</text>
+<rect x="1820.0" y="602.0" width="225.0" height="92.0" rx="16" fill="#F4EEF9" stroke="#6B4C9A" stroke-width="2"/>
+<text x="1932.5" y="627.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Awaiting Feedback</text>
+<line x1="1820.0" y1="638.0" x2="2045.0" y2="638.0" stroke="#6B4C9A" stroke-width="1.2"/>
+<text x="1830.0" y="657.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">do / dealer SPM places the order</text>
+<text x="1830.0" y="673.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / editable lines left to dealer</text>
+<rect x="1820.0" y="802.0" width="225.0" height="92.0" rx="16" fill="#F4EEF9" stroke="#6B4C9A" stroke-width="2"/>
+<text x="1932.5" y="827.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Feedback Recorded</text>
+<line x1="1820.0" y1="838.0" x2="2045.0" y2="838.0" stroke="#6B4C9A" stroke-width="1.2"/>
+<text x="1830.0" y="857.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">do / flag excess, short, not placed</text>
+<text x="1830.0" y="873.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / PO numbers mapped</text>
+<rect x="1490.0" y="810.0" width="225.0" height="76.0" rx="16" fill="#EEF3FA" stroke="#2E6DA4" stroke-width="2"/>
+<text x="1602.5" y="835.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="middle">Closed</text>
+<line x1="1490.0" y1="846.0" x2="1715.0" y2="846.0" stroke="#2E6DA4" stroke-width="1.2"/>
+<text x="1500.0" y="865.0" font-size="12.2" fill="#222" font-weight="normal" text-anchor="start">entry / reasons kept for next run</text>
+<text x="40.0" y="1002.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="start">UML notation used</text>
+<circle cx="50" cy="1032" r="8" fill="#1B3A5C"/>
+<text x="82.0" y="1036.0" font-size="12.5" fill="#333" font-weight="normal" text-anchor="start">Initial state</text>
+<circle cx="213.0" cy="1032" r="10" fill="#fff" stroke="#1B3A5C" stroke-width="2"/><circle cx="213.0" cy="1032" r="6" fill="#1B3A5C"/>
+<text x="245.0" y="1036.0" font-size="12.5" fill="#333" font-weight="normal" text-anchor="start">Final state</text>
+<rect x="352.0" y="1022.0" width="30.0" height="20.0" rx="7" fill="#EEF3FA" stroke="#2E6DA4" stroke-width="1.6"/>
+<text x="394.0" y="1036.0" font-size="12.5" fill="#333" font-weight="normal" text-anchor="start">State (name; entry / do activities)</text>
+<polygon points="679.0,1022 689.0,1032 679.0,1042 669.0,1032" fill="#fff" stroke="#33475b" stroke-width="1.6"/>
+<text x="711.0" y="1036.0" font-size="12.5" fill="#333" font-weight="normal" text-anchor="start">Choice pseudostate</text>
+<rect x="867.0" y="1020.0" width="34.0" height="24.0" rx="8" fill="#FAFBFD" stroke="#33475b" stroke-width="1.6"/>
+<text x="909.0" y="1036.0" font-size="12.5" fill="#333" font-weight="normal" text-anchor="start">Composite state</text>
+<path d="M1044.0,1032 H1074.0" fill="none" stroke="#33475b" stroke-width="1.9" marker-end="url(#m33475b)" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1086.0" y="1036.0" font-size="12.5" fill="#333" font-weight="normal" text-anchor="start">Transition  event [guard] / effect</text>
+<path d="M1354.0,1032 H1384.0" fill="none" stroke="#2E7D32" stroke-width="1.9" stroke-dasharray="7 5" marker-end="url(#m2E7D32)" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1396.0" y="1036.0" font-size="12.5" fill="#333" font-weight="normal" text-anchor="start">«uses» dependency</text>
+<text x="1587.0" y="1036.0" font-size="12.5" fill="#333" font-weight="normal" text-anchor="start">Numbered note</text>
+<rect x="30.0" y="1062.0" width="2165.0" height="229.0" rx="14" fill="#FBFBF7" stroke="#DDDDDD" stroke-width="1.6"/>
+<text x="50.0" y="1094.0" font-size="16.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">Notes</text>
+<text x="84.0" y="1127.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">Scheduled orders appear on the location’s ordering day; others are built on request with filters for category, order type and brand / dealer /</text>
+<text x="84.0" y="1144.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">location. <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.1"><tspan text-decoration="underline">FR-023.1</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.3"><tspan text-decoration="underline">023.3</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.9"><tspan text-decoration="underline">023.9</tspan></a></text>
+<text x="84.0" y="1187.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">Readiness = every required file for the dealer uploaded and validated; exceptions are flagged separately. <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-014.3"><tspan text-decoration="underline">FR-014.3</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-014.4"><tspan text-decoration="underline">014.4</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.4"><tspan text-decoration="underline">023.4</tspan></a></text>
+<text x="84.0" y="1230.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">Generation applies, in order: OOQ and CBO, SOQ = MAX - CS - OOQ + CBO, TOC / child excess / feedback / ad hoc adjustments, the editable split and the</text>
+<text x="84.0" y="1247.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">sourcing sequence. <a href="../Sparecare_OGYS_FRD-v1.0.html#s-7-3-fr-006--soq-formula"><tspan text-decoration="underline">FR-006</tspan></a>, 015-020, 024, 025</text>
+<text x="1146.5" y="1127.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">Validation compares the order with the dealer’s past orders, e.g. usually Rs 1-1.5 lakh, now Rs 5 lakh - flagged. Thresholds to be confirmed (<a href="../Sparecare_OGYS_FRD-v1.0.html#s-18--open-issues"><tspan text-decoration="underline">OI-047</tspan></a>);</text>
+<text x="1146.5" y="1144.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">part-level SOQ validation rule in <a href="../Sparecare_OGYS_FRD-v1.0.html#s-7-10-fr-032--moq-rules-and-soq-validation"><tspan text-decoration="underline">FR-032</tspan></a> (reference only). <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-023.6"><tspan text-decoration="underline">FR-023.6</tspan></a></text>
+<text x="1146.5" y="1187.0" font-size="12.6" fill="#333" font-weight="normal" text-anchor="start">Transfer orders to child locations go out with the order; whether ITO uses the mobile app is <a href="../Sparecare_OGYS_FRD-v1.0.html#s-18--open-issues"><tspan text-decoration="underline">OI-049</tspan></a>.</text>
+<text x="40.0" y="1321.0" font-size="15" fill="#1B3A5C" font-weight="bold" text-anchor="start">States in plain words</text>
+<text x="40.0" y="1349.0" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">Due</text>
+<text x="40.0" y="1367.0" font-size="12.8" fill="#222" font-weight="normal" text-anchor="start">The location is on today’s list - scheduled for its ordering day, or requested outside the schedule.</text>
+<text x="40.0" y="1395.0" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">Awaiting Data</text>
+<text x="40.0" y="1413.0" font-size="12.8" fill="#222" font-weight="normal" text-anchor="start">Some required file is missing or failed its check; it stays on the list and carries over to the next day.</text>
+<text x="40.0" y="1441.0" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">Ready</text>
+<text x="40.0" y="1459.0" font-size="12.8" fill="#222" font-weight="normal" text-anchor="start">Every required file is in and checked; the order team can select it with others and generate in one go.</text>
+<text x="40.0" y="1487.0" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">Generated / Validated / Flagged</text>
+<text x="40.0" y="1505.0" font-size="12.8" fill="#222" font-weight="normal" text-anchor="start">The quantities are worked out, then checked against the dealer’s usual orders; odd results are flagged.</text>
+<text x="1112.5" y="1349.0" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">Approved / Sent</text>
+<text x="1112.5" y="1367.0" font-size="12.8" fill="#222" font-weight="normal" text-anchor="start">The order is accepted, produced in the dealer’s format and sent with alerts to the chosen people.</text>
+<text x="1112.5" y="1395.0" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">Not Sent</text>
+<text x="1112.5" y="1413.0" font-size="12.8" fill="#222" font-weight="normal" text-anchor="start">The order team decides not to send this run; a remark is mandatory.</text>
+<text x="1112.5" y="1441.0" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">Awaiting / Recorded Feedback</text>
+<text x="1112.5" y="1459.0" font-size="12.8" fill="#222" font-weight="normal" text-anchor="start">The dealer places the order with the company and reports what was actually placed, with reasons.</text>
+<text x="1112.5" y="1487.0" font-size="13.5" fill="#1B3A5C" font-weight="bold" text-anchor="start">Closed</text>
+<text x="1112.5" y="1505.0" font-size="12.8" fill="#222" font-weight="normal" text-anchor="start">The run is complete; its feedback and PO numbers are kept and used by the next order.</text>
+<text x="230.5" y="187.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="start" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">ordering day | manual request</text>
+<text x="565.6" y="240.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">[data complete]</text>
+<text x="515.5" y="297.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="start" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">[data incomplete]</text>
+<text x="507.5" y="560.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">day ends [not generated]</text>
+<text x="507.5" y="575.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">/ carry to next day’s list</text>
+<text x="706.2" y="440.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">uploads validated</text>
+<text x="909.4" y="240.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">generate</text>
+<text x="1221.1" y="240.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">/ validate</text>
+<text x="1419.0" y="240.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">[within norms]</text>
+<text x="1370.5" y="297.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="start" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">[out of line]</text>
+<text x="1166.2" y="425.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">correct data</text>
+<text x="1166.2" y="440.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">/ regenerate</text>
+<text x="1808.2" y="240.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">approve</text>
+<text x="1630.1" y="440.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">upload &amp; approve</text>
+<text x="1220.0" y="542.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">mark not sent</text>
+<text x="1220.0" y="557.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">/ record remark</text>
+<text x="1744.0" y="652.6" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="end" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">after(feedback due)</text>
+<text x="1744.0" y="667.6" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="end" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">/ alert "feedback not done"</text>
+<text x="1940.5" y="721.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="start" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">OEM PO file uploaded | manual update</text>
+<text x="1793.8" y="840.0" font-size="12.2" fill="#33475b" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">[all remarks given]</text>
+<text x="912.2" y="910.0" font-size="12.2" fill="#2E7D32" font-weight="normal" text-anchor="middle" style="paint-order:stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round">«uses» feedback, PO map and remarks shape the next order</text>
+<circle cx="222.5" cy="170.0" r="11" fill="#1B3A5C"/>
+<polygon points="507.5,234.0 521.5,248.0 507.5,262.0 493.5,248.0" fill="#fff" stroke="#33475b" stroke-width="2"/>
+<polygon points="1362.5,234.0 1376.5,248.0 1362.5,262.0 1348.5,248.0" fill="#fff" stroke="#33475b" stroke-width="2"/>
+<circle cx="1077.5" cy="818.0" r="13" fill="#fff" stroke="#1B3A5C" stroke-width="2"/><circle cx="1077.5" cy="818.0" r="8" fill="#1B3A5C"/>
+<circle cx="1362.5" cy="818.0" r="13" fill="#fff" stroke="#1B3A5C" stroke-width="2"/><circle cx="1362.5" cy="818.0" r="8" fill="#1B3A5C"/>
+<circle cx="329.0" cy="204.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="329.0" y="208.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">1</text>
+<circle cx="881.0" cy="204.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="881.0" y="208.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">2</text>
+<circle cx="1172.6" cy="204.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="1172.6" y="208.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">3</text>
+<circle cx="1464.2" cy="404.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="1464.2" y="408.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">4</text>
+<circle cx="2037.5" cy="404.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="2037.5" y="408.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">5</text>
+<circle cx="1557.0" cy="1032.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="1557.0" y="1036.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">1</text>
+<circle cx="62.0" cy="1122.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="62.0" y="1126.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">1</text>
+<circle cx="62.0" cy="1182.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="62.0" y="1186.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">2</text>
+<circle cx="62.0" cy="1225.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="62.0" y="1229.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">3</text>
+<circle cx="1124.5" cy="1122.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="1124.5" y="1126.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">4</text>
+<circle cx="1124.5" cy="1182.0" r="12" fill="#A35C00" stroke="#fff" stroke-width="2"/>
+<text x="1124.5" y="1186.5" font-size="12.5" fill="#fff" font-weight="bold" text-anchor="middle">5</text></svg></div></div></main>
+<script>var s=1,box=document.getElementById('v'),img=box.querySelector('svg'),nw=parseFloat(img.getAttribute('width'));
+img.removeAttribute('height');img.style.display='block';img.style.height='auto';
+function fit(){s=box.clientWidth/nw;img.style.width=(nw*s)+'px'}
+function z(k){s*=k;img.style.width=(nw*s)+'px'}fit();
+if(s<0.4){s=0.75;img.style.width=(nw*s)+'px';box.scrollTop=0;box.scrollLeft=(box.scrollWidth-box.clientWidth)/2}</script></body></html>

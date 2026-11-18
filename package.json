@@ -1,0 +1,11 @@
+{
+  "name": "mockup-review-service",
+  "private": true,
+  "description": "Review comments for the screen mockups (screen-mockups skill). Deployed with the site as a Vercel function.",
+  "dependencies": {
+    "@vercel/blob": "2.8.2"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

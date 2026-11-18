@@ -1,0 +1,15 @@
+/* OGYS wireframes - the generic --wf-* variables mapped to the SpareCare design system tokens
+   (SpareCare Design System Guide v1: six colours, signal colours, Barlow / Inter / Plex Mono, 2px / 6px corners). */
+:root{
+  --wf-font-display:var(--font-display); --wf-font-body:var(--font-body); --wf-font-mono:var(--font-mono);
+  --wf-ink:var(--text-body); --wf-heading:var(--text-heading); --wf-muted:var(--text-secondary);
+  --wf-page:var(--surface-page); --wf-surface:var(--surface-card); --wf-sunken:var(--surface-row-alt);
+  --wf-border:var(--border-default); --wf-border-soft:var(--border-soft); --wf-border-strong:var(--border-strong);
+  --wf-primary:var(--action-primary); --wf-primary-ink:#fff; --wf-accent:var(--sc-teal); --wf-accent-tint:var(--sc-teal-tint);
+  --wf-nav-bg:var(--surface-inverse); --wf-nav-ink:#fff;
+  --wf-ok:var(--status-ok); --wf-ok-bg:var(--status-ok-bg); --wf-warn:var(--status-warn); --wf-warn-bg:var(--status-warn-bg); --wf-warn-fg:var(--status-warn-fg);
+  --wf-bad:var(--status-error); --wf-bad-bg:var(--status-error-bg);
+  --wf-radius:var(--r-sharp); --wf-radius-field:var(--r-field); --wf-radius-pill:var(--r-pill); --wf-hit:var(--hit-min);
+  --wf-canvas:var(--anno-canvas); --wf-marker:var(--anno-marker-bg); --wf-marker-open:var(--sc-amber);
+  --wf-query:var(--sc-amber); --wf-query-bg:#FDF5EA; --wf-query-fg:var(--sc-amber-fg); --wf-proposal-bg:var(--sc-teal-tint);
+}

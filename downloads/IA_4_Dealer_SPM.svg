@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3600" height="1622" viewBox="0 0 3600 1622" font-family="Inter, Segoe UI, Arial, sans-serif"><title>Information architecture - Dealer SPM</title><defs></defs><rect width="3600" height="1622" fill="#fff"/><rect x="20.0" y="20.0" width="3560.0" height="1582.0" rx="0" fill="none" stroke="#CFCFCF" stroke-width="2"/>
+<path d="M1800.0,388 V432" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1791.0,422 L1800.0,432 L1809.0,422" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1800.0,528 V572" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1791.0,562 L1800.0,572 L1809.0,562" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1800.0,800 V862" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250.0,862 H2570.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M250.0,862 V914" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M241.0,904 L250.0,914 L259.0,904" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1410.0,862 V914" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1401.0,904 L1410.0,914 L1419.0,904" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2570.0,862 V914" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2561.0,904 L2570.0,914 L2579.0,904" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90,954 H94 Q78,954 78,970 V1408.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78,1100.0 Q78,1116.0 94,1116.0 H122" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112,1107.0 L122,1116.0 L112,1125.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78,1408.0 Q78,1424.0 94,1424.0 H122" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112,1415.0 L122,1424.0 L112,1433.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1250,954 H1254 Q1238,954 1238,970 V1386.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1238,1100.0 Q1238,1116.0 1254,1116.0 H1282" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1272,1107.0 L1282,1116.0 L1272,1125.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1238,1386.0 Q1238,1402.0 1254,1402.0 H1282" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1272,1393.0 L1282,1402.0 L1272,1411.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2410,954 H2414 Q2398,954 2398,970 V1100.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2398,1100.0 Q2398,1116.0 2414,1116.0 H2442" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2432,1107.0 L2442,1116.0 L2432,1125.0" fill="none" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40.0" y="62.0" font-size="30" fill="#1B3A5C" font-weight="bold" text-anchor="start">Information architecture - Dealer SPM</text>
+<text x="40.0" y="96.0" font-size="17" fill="#555" font-weight="normal" text-anchor="start">The dealer’s spare parts manager: the complete order, its download, the feedback update and the messages received.</text>
+<rect x="40.0" y="130.0" width="34.0" height="22.0" rx="4" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="86.0" y="147.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">menu / screen and what the user can do there</text>
+<rect x="40.0" y="164.0" width="34.0" height="22.0" rx="4" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="86.0" y="181.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">where it is defined in the FRD, and the screen or figure that shows it</text>
+<text x="40.0" y="220.0" font-size="15" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm</text>
+<text x="200.0" y="220.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">= assembled by the analyst or taken from a source document; to be confirmed with the client</text>
+<text x="40.0" y="246.0" font-size="15" fill="#222" font-weight="bold" text-anchor="start">Screen - not shown</text>
+<text x="200.0" y="246.0" font-size="15" fill="#333" font-weight="normal" text-anchor="start">= no screen or wireframe yet</text>
+<rect x="1690.0" y="300.0" width="220.0" height="80.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1800.0" y="348.0" font-size="19" fill="#222" font-weight="normal" text-anchor="middle">Start</text>
+<rect x="1630.0" y="440.0" width="340.0" height="80.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1800.0" y="488.0" font-size="19" fill="#222" font-weight="normal" text-anchor="middle">Dealer SPM Login</text>
+<rect x="1360.0" y="580.0" width="880.0" height="212.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1396.0" y="626.0" font-size="19" fill="#222" font-weight="bold" text-anchor="start">Dealer View - My Orders</text>
+<text x="1396.0" y="652.0" font-size="14" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm: landing page assembled from <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-022.2"><tspan text-decoration="underline">FR-022.2</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-5-fr-026--spm-order-feedback-update"><tspan text-decoration="underline">FR-026</tspan></a></text>
+<circle cx="1410.0" cy="679" r="3" fill="#222"/>
+<text x="1424.0" y="684.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Latest order per location, visible on the dealer side - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-022.2"><tspan text-decoration="underline">FR-022.2</tspan></a></text>
+<circle cx="1410.0" cy="703" r="3" fill="#222"/>
+<text x="1424.0" y="708.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Orders waiting for my feedback - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.5"><tspan text-decoration="underline">FR-026.5</tspan></a></text>
+<circle cx="1410.0" cy="727" r="3" fill="#222"/>
+<text x="1424.0" y="732.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Alternate part validation alerts - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.5"><tspan text-decoration="underline">FR-026.5</tspan></a></text>
+<circle cx="1410.0" cy="751" r="3" fill="#222"/>
+<text x="1424.0" y="756.0" font-size="16" fill="#222" font-weight="normal" text-anchor="start">Pending from OEM (for reference) - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-021.5"><tspan text-decoration="underline">FR-021.5</tspan></a></text>
+<rect x="90.0" y="922.0" width="320.0" height="64.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="250.0" y="952.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">My Orders</text>
+<text x="250.0" y="974.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-10--m006---order-output--notifications-and-feedback"><tspan text-decoration="underline">M006</tspan></a>  ·  FRD 10.3, 10.5, 7.9</text>
+<rect x="130.0" y="1036.0" width="540.0" height="186.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="150.0" y="1074.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Complete Order</text>
+<text x="150.0" y="1096.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="162" cy="1113" r="2.6" fill="#222"/>
+<text x="174.0" y="1118.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Company order, editable order, gainer order and ITO in one</text>
+<text x="174.0" y="1140.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">view</text>
+<circle cx="162" cy="1157" r="2.6" fill="#222"/>
+<text x="174.0" y="1162.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Non-editable vs editable lines (where set)</text>
+<circle cx="162" cy="1179" r="2.6" fill="#222"/>
+<text x="174.0" y="1184.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Family part shown on each line</text>
+<rect x="710.0" y="1036.0" width="420.0" height="262.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="730.0" y="1074.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="742" cy="1091" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1096.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-5-fr-026--spm-order-feedback-update"><tspan text-decoration="underline">10.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.1"><tspan text-decoration="underline">FR-026.1</tspan></a></text>
+<circle cx="742" cy="1113" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1118.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-7-9-fr-025--soq-rule-settings---editable-and-non-editable-or"><tspan text-decoration="underline">7.9</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-025.1"><tspan text-decoration="underline">FR-025.1</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-025.3"><tspan text-decoration="underline">025.3</tspan></a></text>
+<circle cx="742" cy="1135" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1140.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-3-fr-021--order-output-format"><tspan text-decoration="underline">10.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-021.4"><tspan text-decoration="underline">FR-021.4</tspan></a></text>
+<text x="730.0" y="1162.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="742" cy="1179" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1184.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">S07 SPM order feedback page</text>
+<circle cx="742" cy="1201" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1206.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Requirement sheet (Figure 10.5.1a)</text>
+<text x="730.0" y="1228.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="742" cy="1245" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1250.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m006-order-output-notifications-and-feedback.html#W10"><tspan text-decoration="underline">W10</tspan></a> Update order feedback</text>
+<circle cx="742" cy="1267" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1272.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m006-order-output-notifications-and-feedback.html#W14"><tspan text-decoration="underline">W14</tspan></a> Send the order to the dealer</text>
+<rect x="130.0" y="1344.0" width="540.0" height="142.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="150.0" y="1382.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Download Order</text>
+<text x="150.0" y="1404.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="162" cy="1421" r="2.6" fill="#222"/>
+<text x="174.0" y="1426.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Excel with Order to OEM, Pending from OEM, ... sheets</text>
+<circle cx="162" cy="1443" r="2.6" fill="#222"/>
+<text x="174.0" y="1448.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Same file as sent by e-mail</text>
+<rect x="710.0" y="1344.0" width="420.0" height="130.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="730.0" y="1382.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="742" cy="1399" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1404.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-3-fr-021--order-output-format"><tspan text-decoration="underline">10.3</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-021.2"><tspan text-decoration="underline">FR-021.2</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-021.3"><tspan text-decoration="underline">021.3</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-021.5"><tspan text-decoration="underline">021.5</tspan></a></text>
+<text x="730.0" y="1426.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="742" cy="1443" r="2.6" fill="#0d2a12"/>
+<text x="754.0" y="1448.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Current Excel (Figure 10.3.1b)</text>
+<rect x="1250.0" y="922.0" width="320.0" height="64.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1410.0" y="952.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Order Feedback</text>
+<text x="1410.0" y="974.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-10--m006---order-output--notifications-and-feedback"><tspan text-decoration="underline">M006</tspan></a>  ·  FRD 10.5, 7.7</text>
+<rect x="1290.0" y="1036.0" width="540.0" height="186.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1310.0" y="1074.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Update Feedback</text>
+<text x="1310.0" y="1096.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="1322" cy="1113" r="2.6" fill="#222"/>
+<text x="1334.0" y="1118.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Part-wise, on screen or download - edit - upload</text>
+<circle cx="1322" cy="1135" r="2.6" fill="#222"/>
+<text x="1334.0" y="1140.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Reason per line (not required, not moving ...)</text>
+<circle cx="1322" cy="1157" r="2.6" fill="#222"/>
+<text x="1334.0" y="1162.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Company PO number</text>
+<circle cx="1322" cy="1179" r="2.6" fill="#222"/>
+<text x="1334.0" y="1184.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Same process for editable, gainer and ITO orders</text>
+<rect x="1870.0" y="1036.0" width="420.0" height="240.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="1890.0" y="1074.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="1902" cy="1091" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1096.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-5-fr-026--spm-order-feedback-update"><tspan text-decoration="underline">10.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.2"><tspan text-decoration="underline">FR-026.2</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.4"><tspan text-decoration="underline">026.4</tspan></a></text>
+<circle cx="1902" cy="1113" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1118.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-7-7-fr-019--soq-rule-settings---dealer-order-feedback"><tspan text-decoration="underline">7.7</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-019.1"><tspan text-decoration="underline">FR-019.1</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-019.2"><tspan text-decoration="underline">019.2</tspan></a></text>
+<text x="1890.0" y="1140.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="1902" cy="1157" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1162.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">S07 SPM order feedback page</text>
+<circle cx="1902" cy="1179" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1184.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Requirement sheet (Figure 10.5.1a)</text>
+<text x="1890.0" y="1206.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="1902" cy="1223" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1228.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m006-order-output-notifications-and-feedback.html#W10"><tspan text-decoration="underline">W10</tspan></a> Update order feedback</text>
+<circle cx="1902" cy="1245" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1250.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m006-order-output-notifications-and-feedback.html#W16"><tspan text-decoration="underline">W16</tspan></a> Receive the company PO file for feedback</text>
+<rect x="1290.0" y="1322.0" width="540.0" height="164.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="1310.0" y="1360.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Feedback Checks</text>
+<text x="1310.0" y="1382.0" font-size="13.5" fill="#4a4a4a" font-weight="normal" text-anchor="start" font-style="italic">Stated</text>
+<circle cx="1322" cy="1399" r="2.6" fill="#222"/>
+<text x="1334.0" y="1404.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Parts ordered in excess of the suggestion</text>
+<circle cx="1322" cy="1421" r="2.6" fill="#222"/>
+<text x="1334.0" y="1426.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Alternate part validation</text>
+<circle cx="1322" cy="1443" r="2.6" fill="#222"/>
+<text x="1334.0" y="1448.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Done / not done alerts</text>
+<rect x="1870.0" y="1322.0" width="420.0" height="174.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="1890.0" y="1360.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="1902" cy="1377" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1382.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-5-fr-026--spm-order-feedback-update"><tspan text-decoration="underline">10.5</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.3"><tspan text-decoration="underline">FR-026.3</tspan></a>, <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-026.5"><tspan text-decoration="underline">026.5</tspan></a></text>
+<text x="1890.0" y="1404.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="1902" cy="1421" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1426.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">S07</text>
+<text x="1890.0" y="1448.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Workflows</text>
+<circle cx="1902" cy="1465" r="2.6" fill="#0d2a12"/>
+<text x="1914.0" y="1470.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start"><a href="../workflows/m006-order-output-notifications-and-feedback.html#W10"><tspan text-decoration="underline">W10</tspan></a> Update order feedback</text>
+<rect x="2410.0" y="922.0" width="320.0" height="64.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="2570.0" y="952.0" font-size="17" fill="#222" font-weight="normal" text-anchor="middle">Messages</text>
+<text x="2570.0" y="974.0" font-size="13.5" fill="#555" font-weight="normal" text-anchor="middle"><a href="../Sparecare_OGYS_FRD-v1.0.html#s-10--m006---order-output--notifications-and-feedback"><tspan text-decoration="underline">M006</tspan></a>  ·  FRD 10.4  ·  not a screen</text>
+<rect x="2450.0" y="1036.0" width="540.0" height="164.0" rx="8" fill="#ECEEF1" stroke="none" stroke-width="1.6"/>
+<text x="2470.0" y="1074.0" font-size="16.5" fill="#222" font-weight="bold" text-anchor="start">Notifications Received</text>
+<text x="2470.0" y="1096.0" font-size="13.5" fill="#1F5FBF" font-weight="bold" text-anchor="start" font-style="italic">Assumed - confirm</text>
+<circle cx="2482" cy="1113" r="2.6" fill="#222"/>
+<text x="2494.0" y="1118.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">E-mail with the order file</text>
+<circle cx="2482" cy="1135" r="2.6" fill="#222"/>
+<text x="2494.0" y="1140.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">WhatsApp / SMS alerts</text>
+<circle cx="2482" cy="1157" r="2.6" fill="#222"/>
+<text x="2494.0" y="1162.0" font-size="15" fill="#222" font-weight="normal" text-anchor="start">Mobile app and AI call to be confirmed (<a href="../Sparecare_OGYS_FRD-v1.0.html#s-18--open-issues"><tspan text-decoration="underline">OI-049</tspan></a>)</text>
+<rect x="3030.0" y="1036.0" width="420.0" height="130.0" rx="8" fill="#CFEFD6" stroke="none" stroke-width="1.6"/>
+<text x="3050.0" y="1074.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">FRD</text>
+<circle cx="3062" cy="1091" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1096.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Section <a href="../Sparecare_OGYS_FRD-v1.0.html#s-10-4-fr-022--notification-management"><tspan text-decoration="underline">10.4</tspan></a> - <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-022.1"><tspan text-decoration="underline">FR-022.1</tspan></a> to <a href="../Sparecare_OGYS_FRD-v1.0.html#FR-022.4"><tspan text-decoration="underline">022.4</tspan></a></text>
+<text x="3050.0" y="1118.0" font-size="15.5" fill="#0d2a12" font-weight="bold" text-anchor="start">Screen</text>
+<circle cx="3062" cy="1135" r="2.6" fill="#0d2a12"/>
+<text x="3074.0" y="1140.0" font-size="15" fill="#0d2a12" font-weight="normal" text-anchor="start">Outside OGYS (e-mail / WhatsApp / SMS)</text></svg>
